@@ -1,0 +1,38 @@
+name: Update portfolio dashboard
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 6 * * 1-5"
+    - cron: "0 11 * * 1-5"
+    - cron: "30 16 * * 1-5"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build-dashboard:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Generate dashboard
+        run: python scripts/generate_dashboard.py
+
+      - name: Commit updated dashboard and snapshots
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update portfolio dashboard"
+          file_pattern: "docs/index.html docs/dashboard_data.json data/last_snapshot.csv data/snapshots/*.csv"
