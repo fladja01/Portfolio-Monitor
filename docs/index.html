@@ -17,11 +17,13 @@
       --negative: #b91c1c;
       --warning: #b45309;
       --accent: #2563eb;
+      --green: #047857;
       --shadow: 0 18px 42px rgba(0,0,0,0.22);
       --radius: 24px;
     }
 
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
@@ -38,7 +40,11 @@
       min-height: 100vh;
     }
 
-    .app { max-width: 1560px; margin: 0 auto; padding: 24px; }
+    .app {
+      max-width: 1560px;
+      margin: 0 auto;
+      padding: 24px;
+    }
 
     .hero {
       border: 1px solid rgba(255,255,255,0.12);
@@ -50,10 +56,37 @@
       backdrop-filter: blur(16px);
     }
 
-    .hero-content { display: flex; justify-content: space-between; gap: 24px; align-items: flex-start; }
-    .eyebrow { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(229,238,252,0.76); font-weight: 760; margin-bottom: 10px; }
-    h1 { margin: 0; font-size: 34px; letter-spacing: -0.045em; font-weight: 840; line-height: 1.05; }
-    .hero p { margin: 12px 0 0; color: rgba(229,238,252,0.76); font-size: 13px; line-height: 1.58; max-width: 840px; }
+    .hero-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: flex-start;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(229,238,252,0.76);
+      font-weight: 760;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 34px;
+      letter-spacing: -0.045em;
+      font-weight: 840;
+      line-height: 1.05;
+    }
+
+    .hero p {
+      margin: 12px 0 0;
+      color: rgba(229,238,252,0.76);
+      font-size: 13px;
+      line-height: 1.58;
+      max-width: 840px;
+    }
 
     .status-card {
       min-width: 330px;
@@ -65,10 +98,29 @@
       color: rgba(229,238,252,0.82);
     }
 
-    .grid { display: grid; gap: 18px; }
-    .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-    .grid-3 { grid-template-columns: 1.2fr 1fr 1fr; }
-    .grid-2 { grid-template-columns: 1.5fr 1fr; }
+    .status-card strong {
+      display: block;
+      color: #ffffff;
+      margin-bottom: 6px;
+      font-size: 13px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .grid-3 {
+      grid-template-columns: 1.2fr 1fr 1fr;
+    }
+
+    .grid-2 {
+      grid-template-columns: 1.5fr 1fr;
+    }
 
     .card {
       background: var(--panel);
@@ -79,21 +131,75 @@
       color: var(--text-dark);
     }
 
-    .kpi-card { min-height: 118px; position: relative; overflow: hidden; }
-    .kpi-card::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 3px; background: linear-gradient(90deg, #2563eb, #15d0a1, transparent); }
-    .kpi-label { color: var(--muted-dark); font-size: 11px; font-weight: 760; text-transform: uppercase; letter-spacing: 0.065em; }
-    .kpi-value { margin-top: 12px; font-size: 27px; line-height: 1; font-weight: 830; letter-spacing: -0.045em; color: #0f172a; }
-    .kpi-foot { margin-top: 12px; color: var(--muted-dark); font-size: 12px; }
+    .kpi-card {
+      min-height: 118px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .kpi-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 3px;
+      background: linear-gradient(90deg, #2563eb, #15d0a1, transparent);
+    }
+
+    .kpi-label {
+      color: var(--muted-dark);
+      font-size: 11px;
+      font-weight: 760;
+      text-transform: uppercase;
+      letter-spacing: 0.065em;
+    }
+
+    .kpi-value {
+      margin-top: 12px;
+      font-size: 27px;
+      line-height: 1;
+      font-weight: 830;
+      letter-spacing: -0.045em;
+      color: #0f172a;
+    }
+
+    .kpi-foot {
+      margin-top: 12px;
+      color: var(--muted-dark);
+      font-size: 12px;
+    }
 
     .positive { color: var(--positive); }
     .negative { color: var(--negative); }
     .warning { color: var(--warning); }
 
-    .section-title { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 12px; }
-    .section-title h2 { margin: 0; font-size: 15px; letter-spacing: -0.015em; font-weight: 800; color: #0f172a; }
-    .section-title span { color: var(--muted-dark); font-size: 12px; }
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
 
-    .chart-header-actions { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+    .section-title h2 {
+      margin: 0;
+      font-size: 15px;
+      letter-spacing: -0.015em;
+      font-weight: 800;
+      color: #0f172a;
+    }
+
+    .section-title span {
+      color: var(--muted-dark);
+      font-size: 12px;
+    }
+
+    .chart-header-actions {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
     .range-btn {
       border: 1px solid rgba(148,163,184,0.35);
       background: #f8fafc;
@@ -105,6 +211,7 @@
       cursor: pointer;
       transition: all 0.15s ease;
     }
+
     .range-btn.active {
       background: #2563eb;
       border-color: #2563eb;
@@ -112,10 +219,22 @@
       box-shadow: 0 8px 16px rgba(37,99,235,0.20);
     }
 
-    .chart { width: 100%; height: 336px; }
-    .chart-sm { height: 284px; }
+    .chart {
+      width: 100%;
+      height: 336px;
+    }
 
-    .metric-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 12px; }
+    .chart-sm {
+      height: 284px;
+    }
+
+    .metric-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 12px;
+    }
+
     .metric-mini {
       padding: 12px;
       border-radius: 16px;
@@ -123,6 +242,7 @@
       border: 1px solid rgba(226,232,240,0.95);
       color: #334155;
     }
+
     .metric-mini span {
       display: block;
       color: #64748b;
@@ -131,6 +251,7 @@
       text-transform: uppercase;
       letter-spacing: 0.04em;
     }
+
     .metric-mini strong {
       display: block;
       margin-top: 7px;
@@ -139,44 +260,184 @@
       color: #0f172a;
     }
 
-    .instrument-counts { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; }
-    .count-box { background: #f8fafc; border: 1px solid var(--border-light); border-radius: 16px; padding: 12px; }
-    .count-box span { display: block; color: var(--muted-dark); font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 780; }
-    .count-box strong { display: block; margin-top: 7px; font-size: 22px; letter-spacing: -0.04em; }
+    .instrument-counts {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 10px;
+    }
 
-    .table-wrap { overflow: auto; border-radius: 18px; border: 1px solid var(--border-light); background: #ffffff; }
-    table { width: 100%; border-collapse: collapse; font-size: 12px; background: #ffffff; min-width: 1060px; color: var(--text-dark); }
-    th { position: sticky; top: 0; z-index: 2; background: linear-gradient(180deg, #f8fafc, #eef3f9); color: #475569; font-weight: 780; text-align: left; padding: 12px 10px; border-bottom: 1px solid rgba(203,213,225,0.85); white-space: nowrap; }
-    td { padding: 11px 10px; border-bottom: 1px solid rgba(226,232,240,0.85); white-space: nowrap; }
-    tr:hover td { background: #f8fafc; }
-    td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+    .count-box {
+      background: #f8fafc;
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      padding: 12px;
+    }
 
-    .pill { display: inline-flex; border-radius: 999px; padding: 4px 8px; font-size: 11px; font-weight: 740; background: #eef2ff; color: #334155; }
-    .badge { display: inline-flex; border-radius: 999px; padding: 4px 8px; font-size: 11px; font-weight: 760; }
-    .badge.positive { background: rgba(16,185,129,0.12); color: #047857; }
-    .badge.negative { background: rgba(239,68,68,0.12); color: #b91c1c; }
-    .badge.neutral { background: #f1f5f9; color: #475569; }
+    .count-box span {
+      display: block;
+      color: var(--muted-dark);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 780;
+    }
 
-    .footer-note { margin-top: 14px; color: var(--muted-dark); font-size: 11px; line-height: 1.45; }
+    .count-box strong {
+      display: block;
+      margin-top: 7px;
+      font-size: 22px;
+      letter-spacing: -0.04em;
+    }
+
+    .table-wrap {
+      overflow: auto;
+      border-radius: 18px;
+      border: 1px solid var(--border-light);
+      background: #ffffff;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      background: #ffffff;
+      min-width: 1060px;
+      color: var(--text-dark);
+    }
+
+    th {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      background: linear-gradient(180deg, #f8fafc, #eef3f9);
+      color: #475569;
+      font-weight: 780;
+      text-align: left;
+      padding: 12px 10px;
+      border-bottom: 1px solid rgba(203,213,225,0.85);
+      white-space: nowrap;
+    }
+
+    td {
+      padding: 11px 10px;
+      border-bottom: 1px solid rgba(226,232,240,0.85);
+      white-space: nowrap;
+    }
+
+    tr:hover td {
+      background: #f8fafc;
+    }
+
+    td.num, th.num {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .pill {
+      display: inline-flex;
+      border-radius: 999px;
+      padding: 4px 8px;
+      font-size: 11px;
+      font-weight: 740;
+      background: #eef2ff;
+      color: #334155;
+    }
+
+    .badge {
+      display: inline-flex;
+      border-radius: 999px;
+      padding: 4px 8px;
+      font-size: 11px;
+      font-weight: 760;
+    }
+
+    .badge.positive {
+      background: rgba(16,185,129,0.12);
+      color: #047857;
+    }
+
+    .badge.negative {
+      background: rgba(239,68,68,0.12);
+      color: #b91c1c;
+    }
+
+    .badge.neutral {
+      background: #f1f5f9;
+      color: #475569;
+    }
+
+    .footer-note {
+      margin-top: 14px;
+      color: var(--muted-dark);
+      font-size: 11px;
+      line-height: 1.45;
+    }
 
     @media (max-width: 1280px) {
-      .grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .grid-3, .grid-2 { grid-template-columns: 1fr; }
-      .instrument-counts { grid-template-columns: repeat(3, 1fr); }
+      .grid-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .grid-3, .grid-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .instrument-counts {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
 
     @media (max-width: 820px) {
-      body { background-attachment: scroll; }
-      .app { padding: 14px; }
-      .hero { border-radius: 24px; padding: 18px; }
-      .hero-content { flex-direction: column; }
-      .status-card { min-width: 0; width: 100%; }
-      h1 { font-size: 27px; }
-      .grid-4, .grid-3, .grid-2, .instrument-counts, .metric-strip { grid-template-columns: 1fr; }
-      .chart { height: 295px; }
-      .chart-sm { height: 260px; }
-      .section-title { flex-direction: column; align-items: flex-start; }
-      table { min-width: 940px; }
+      body {
+        background-attachment: scroll;
+      }
+
+      .app {
+        padding: 14px;
+      }
+
+      .hero {
+        border-radius: 24px;
+        padding: 18px;
+      }
+
+      .hero-content {
+        flex-direction: column;
+      }
+
+      .status-card {
+        min-width: 0;
+        width: 100%;
+      }
+
+      h1 {
+        font-size: 27px;
+      }
+
+      .grid-4,
+      .grid-3,
+      .grid-2,
+      .instrument-counts,
+      .metric-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .chart {
+        height: 295px;
+      }
+
+      .chart-sm {
+        height: 260px;
+      }
+
+      .section-title {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      table {
+        min-width: 940px;
+      }
     }
   </style>
 </head>
@@ -193,6 +454,7 @@
             i pesi sono ricalcolati sui controvalori correnti e la contribution è calcolata come peso × rendimento.
           </p>
         </div>
+
         <div class="status-card">
           <strong id="statusTitle">—</strong>
           <div id="statusDetails">—</div>
@@ -208,6 +470,7 @@
           <h2>Executive summary</h2>
           <span id="portfolioName">Fladjellux Fund</span>
         </div>
+
         <div class="metric-strip">
           <div class="metric-mini"><span>PAC exposure</span><strong id="pacExposure">—</strong></div>
           <div class="metric-mini"><span>PIC exposure</span><strong id="picExposure">—</strong></div>
@@ -220,6 +483,7 @@
           <h2>Data quality</h2>
           <span id="dataQualityLabel">—</span>
         </div>
+
         <div class="metric-strip">
           <div class="metric-mini"><span>Fonte</span><strong id="dataSource">—</strong></div>
           <div class="metric-mini"><span>Errori/missing</span><strong id="missingCount">—</strong></div>
@@ -243,6 +507,7 @@
             <h2>Equity curve</h2>
             <span id="equityRangeLabel">ALL | Indexed to 100</span>
           </div>
+
           <div class="chart-header-actions" id="equityRangeControls">
             <button class="range-btn active" data-range="all">ALL</button>
             <button class="range-btn" data-range="1y">1 anno</button>
@@ -250,44 +515,72 @@
             <button class="range-btn" data-range="1m">1 mese</button>
           </div>
         </div>
+
         <div id="equityCurve" class="chart"></div>
       </div>
 
       <div class="card">
-        <div class="section-title"><h2>Asset allocation</h2><span>By asset class</span></div>
+        <div class="section-title">
+          <h2>Asset allocation</h2>
+          <span>By asset class</span>
+        </div>
         <div id="assetAllocation" class="chart chart-sm"></div>
       </div>
 
       <div class="card">
-        <div class="section-title"><h2>Sector allocation</h2><span>By sector</span></div>
+        <div class="section-title">
+          <h2>Sector allocation</h2>
+          <span>By sector</span>
+        </div>
         <div id="sectorAllocation" class="chart chart-sm"></div>
       </div>
     </section>
 
     <section class="grid grid-2" style="margin-top: 18px;">
       <div class="card">
-        <div class="section-title"><h2>Daily contribution</h2><span>Da ultimo aggiornamento</span></div>
-        <div id="dailyContribution" class="chart"></div>
+        <div class="section-title">
+          <div>
+            <h2>Contribution analysis</h2>
+            <span id="contributionRangeLabel">Ultimi 6 mesi</span>
+          </div>
+
+          <div class="chart-header-actions" id="contributionRangeControls">
+            <button class="range-btn active" data-range="6m">6 mesi</button>
+            <button class="range-btn" data-range="1m">1 mese</button>
+          </div>
+        </div>
+
+        <div id="contributionChart" class="chart"></div>
       </div>
 
       <div class="card">
-        <div class="section-title"><h2>Currency exposure</h2><span>Portfolio weights</span></div>
+        <div class="section-title">
+          <h2>Currency exposure</h2>
+          <span>Portfolio weights</span>
+        </div>
         <div id="currencyExposure" class="chart"></div>
       </div>
     </section>
 
     <section class="card" style="margin-top: 18px;">
-      <div class="section-title"><h2>Piani di accumulo attivi</h2><span>PAC / recurring investments</span></div>
+      <div class="section-title">
+        <h2>Piani di accumulo attivi</h2>
+        <span>PAC / recurring investments</span>
+      </div>
+
       <div class="table-wrap">
         <table>
           <thead>
             <tr>
-              <th>Nome strumento</th><th>ISIN</th><th>Ticker</th><th>Frequenza</th>
+              <th>Nome strumento</th>
+              <th>ISIN</th>
+              <th>Ticker</th>
+              <th>Frequenza</th>
               <th class="num">Peso</th>
-              <th class="num">Rendimento da ultimo aggiornamento</th>
-              <th class="num">Contributo da ultimo aggiornamento</th>
+              <th class="num">Rendimento 12M</th>
+              <th class="num">Contributo 6M</th>
+              <th class="num">Contributo 1M</th>
               <th class="num">Rendimento da acquisto</th>
-              <th class="num">Contributo da acquisto</th>
             </tr>
           </thead>
           <tbody id="pacBody"></tbody>
@@ -296,17 +589,24 @@
     </section>
 
     <section class="card" style="margin-top: 18px;">
-      <div class="section-title"><h2>Acquisti PIC</h2><span>PIC / lump-sum investments</span></div>
+      <div class="section-title">
+        <h2>Acquisti PIC</h2>
+        <span>PIC / lump-sum investments</span>
+      </div>
+
       <div class="table-wrap">
         <table>
           <thead>
             <tr>
-              <th>Nome strumento</th><th>ISIN</th><th>Ticker</th><th>Data acquisto</th>
+              <th>Nome strumento</th>
+              <th>ISIN</th>
+              <th>Ticker</th>
+              <th>Data acquisto</th>
               <th class="num">Peso</th>
-              <th class="num">Rendimento da ultimo aggiornamento</th>
-              <th class="num">Contributo da ultimo aggiornamento</th>
+              <th class="num">Rendimento 12M</th>
+              <th class="num">Contributo 6M</th>
+              <th class="num">Contributo 1M</th>
               <th class="num">Rendimento da acquisto</th>
-              <th class="num">Contributo da acquisto</th>
             </tr>
           </thead>
           <tbody id="picBody"></tbody>
@@ -315,34 +615,49 @@
     </section>
 
     <section class="card" style="margin-top: 18px;">
-      <div class="section-title"><h2>Holdings table</h2><span>Prezzi, pesi e contribution aggiornati</span></div>
+      <div class="section-title">
+        <h2>Holdings table</h2>
+        <span>Prezzi, pesi e contribution aggiornati</span>
+      </div>
+
       <div class="table-wrap">
         <table>
           <thead>
             <tr>
-              <th>Name</th><th>ISIN</th><th>Ticker</th><th>Asset class</th><th>Sector</th><th>Region</th><th>Currency</th>
-              <th class="num">Peso</th><th class="num">Prezzo</th>
-              <th class="num">Rendimento da ultimo aggiornamento</th>
-              <th class="num">Contributo da ultimo aggiornamento</th>
+              <th>Name</th>
+              <th>ISIN</th>
+              <th>Ticker</th>
+              <th>Asset class</th>
+              <th>Sector</th>
+              <th>Region</th>
+              <th>Currency</th>
+              <th class="num">Peso</th>
+              <th class="num">Prezzo</th>
+              <th class="num">Rendimento 12M</th>
+              <th class="num">Contributo 6M</th>
+              <th class="num">Contributo 1M</th>
               <th class="num">Rendimento da acquisto</th>
-              <th class="num">Contributo da acquisto</th>
             </tr>
           </thead>
           <tbody id="holdingsBody"></tbody>
         </table>
       </div>
+
       <div class="footer-note">
-        La contribuzione è calcolata come peso × rendimento, espressa in punti percentuali di crescita del portafoglio.
-        Per il rendimento da ultimo aggiornamento viene usato, quando disponibile, il peso dello snapshot precedente.
+        La contribution è calcolata come peso × rendimento, espressa in punti percentuali di crescita del portafoglio.
+        Per PAC con nuovi versamenti, questa è una proxy semplificata; per attribution piena servirà uno storico movimenti.
       </div>
     </section>
   </main>
 
   <script>
-    const dashboardData = {"settings": {"portfolio_name": "Fladjellux Fund", "base_currency": "EUR", "start_date": "2025-01-01", "data_source": "Yahoo Finance via yfinance", "scheduled_updates": ["08:30 Europe/Rome", "13:00 Europe/Rome", "18:30 Europe/Rome"], "notes": "Demo. Replace CSV files with real portfolio holdings."}, "generated_at": "2026-06-10T14:57:45", "last_price_date": "2026-06-10", "portfolio": {"name": "Fladjellux Fund", "base_currency": "EUR", "total_value_eur": 285171.9888301082, "previous_total_value_eur": 0, "last_update_return": null, "counts": {"total_instruments": 10, "equity_etfs": 2, "single_stocks": 4, "bond_etfs": 1, "commodity_etfs": 1, "crypto": 2}, "holdings": [{"instrument_id": "AAPL", "name": "Apple", "isin": "US0378331005", "ticker": "AAPL", "asset_class": "Equity", "sector": "Information Technology", "region": "USA", "currency": "USD", "mode": "PIC", "frequency": "", "purchase_date": "2025-01-15", "quantity": 145.0, "purchase_amount_eur": 25000.0, "price": 289.3900146484375, "latest_date": "2026-06-10", "fx_to_eur": 0.86549993597952, "current_value_eur": 36317.72067694358, "previous_value_eur": null, "last_update_return": null, "month_return": -4.74793700294851, "ytd_return": 8.799406683688904, "purchase_return": 45.27088270777433, "data_status": "OK", "weight": 12.735374475569527, "previous_weight": null, "last_update_contribution": null, "purchase_contribution": 5.765416441230911}, {"instrument_id": "MSFT", "name": "Microsoft", "isin": "US5949181045", "ticker": "MSFT", "asset_class": "Equity", "sector": "Information Technology", "region": "USA", "currency": "USD", "mode": "PIC", "frequency": "", "purchase_date": "2025-02-03", "quantity": 70.0, "purchase_amount_eur": 24000.0, "price": 401.8599853515625, "latest_date": "2026-06-10", "fx_to_eur": 0.86549993597952, "current_value_eur": 24346.685411615574, "previous_value_eur": null, "last_update_return": null, "month_return": -12.02114632204976, "ytd_return": -13.199820850907496, "purchase_return": 1.4445225483982194, "data_status": "OK", "weight": 8.537544487274367, "previous_weight": null, "last_update_contribution": null, "purchase_contribution": 0.12332675519820739}, {"instrument_id": "NVDA", "name": "NVIDIA", "isin": "US67066G1040", "ticker": "NVDA", "asset_class": "Equity", "sector": "Semiconductors", "region": "USA", "currency": "USD", "mode": "PIC", "frequency": "", "purchase_date": "2025-03-12", "quantity": 180.0, "purchase_amount_eur": 18000.0, "price": 203.9600067138672, "latest_date": "2026-06-10", "fx_to_eur": 0.86549993597952, "current_value_eur": 31774.927095582214, "previous_value_eur": null, "last_update_return": null, "month_return": -8.239139760280366, "ytd_return": 9.971349490832559, "purchase_return": 76.52737275323452, "data_status": "OK", "weight": 11.14237314328659, "previous_weight": null, "last_update_contribution": null, "purchase_contribution": 8.526965428919222}, {"instrument_id": "BABA", "name": "Alibaba ADR", "isin": "US01609W1027", "ticker": "BABA", "asset_class": "Equity", "sector": "Consumer Discretionary", "region": "China", "currency": "USD", "mode": "PIC", "frequency": "", "purchase_date": "2025-04-18", "quantity": 210.0, "purchase_amount_eur": 16500.0, "price": 116.23999786376953, "latest_date": "2026-06-10", "fx_to_eur": 0.86549993597952, "current_value_eur": 21127.199248963934, "previous_value_eur": null, "last_update_return": null, "month_return": -6.543379557458396, "ytd_return": -24.093744429423147, "purchase_return": 28.043631811902635, "data_status": "OK", "weight": 7.4085815144875635, "previous_weight": null, "last_update_contribution": null, "purchase_contribution": 2.0776353224075725}, {"instrument_id": "SPY", "name": "SPDR S&P 500 ETF", "isin": "US78462F1030", "ticker": "SPY", "asset_class": "ETF Equity", "sector": "Broad Equity", "region": "USA", "currency": "USD", "mode": "PAC", "frequency": "Mensile", "purchase_date": "2025-01-01", "quantity": 85.0, "purchase_amount_eur": 41000.0, "price": 732.510009765625, "latest_date": "2026-06-10", "fx_to_eur": 0.86549993597952, "current_value_eur": 53888.92615730301, "previous_value_eur": null, "last_update_return": null, "month_return": -2.638532884161615, "ytd_return": 9.343102040707985, "purchase_return": 31.43640526171465, "data_status": "OK", "weight": 18.896991383472606, "previous_weight": null, "last_update_contribution": null, "purchase_contribution": 5.940534793579746}, {"instrument_id": "QQQ", "name": "Invesco QQQ ETF", "isin": "US46090E1038", "ticker": "QQQ", "asset_class": "ETF Equity", "sector": "Technology", "region": "USA", "currency": "USD", "mode": "PAC", "frequency": "Mensile", "purchase_date": "2025-01-01", "quantity": 60.0, "purchase_amount_eur": 23000.0, "price": 702.239990234375, "latest_date": "2026-06-10", "fx_to_eur": 0.86549993597952, "current_value_eur": 36467.31999540662, "previous_value_eur": null, "last_update_return": null, "month_return": -4.676326505055828, "ytd_return": 16.62978770659422, "purchase_return": 58.5535651974201, "data_status": "OK", "weight": 12.78783380689332, "previous_weight": null, "last_update_contribution": null, "purchase_contribution": 7.487732605457008}, {"instrument_id": "AGG", "name": "iShares Core U.S. Aggregate Bond ETF", "isin": "US4642872265", "ticker": "AGG", "asset_class": "ETF Bond", "sector": "Aggregate Bonds", "region": "USA", "currency": "USD", "mode": "PIC", "frequency": "", "purchase_date": "2025-01-10", "quantity": 250.0, "purchase_amount_eur": 22000.0, "price": 98.44010162353516, "latest_date": "2026-06-10", "fx_to_eur": 0.86549993597952, "current_value_eur": 21299.975413246782, "previous_value_eur": null, "last_update_return": null, "month_return": 0.5761325718400379, "ytd_return": 1.927802137606105, "purchase_return": -3.1819299397873535, "data_status": "OK", "weight": 7.469168167823204, "previous_weight": null, "last_update_contribution": null, "purchase_contribution": -0.23766369818503302}, {"instrument_id": "GLD", "name": "SPDR Gold Shares", "isin": "US78463V1070", "ticker": "GLD", "asset_class": "ETF Commodity", "sector": "Gold", "region": "Global", "currency": "USD", "mode": "PIC", "frequency": "", "purchase_date": "2025-02-20", "quantity": 95.0, "purchase_amount_eur": 17000.0, "price": 378.0799865722656, "latest_date": "2026-06-10", "fx_to_eur": 0.86549993597952, "current_value_eur": 31086.679396476204, "previous_value_eur": null, "last_update_return": null, "month_return": -7.312914125183911, "ytd_return": -3.457764169332045, "purchase_return": 82.86281997927179, "data_status": "OK", "weight": 10.901028366778393, "previous_weight": null, "last_update_contribution": null, "purchase_contribution": 9.032899511452932}, {"instrument_id": "BTC_EUR", "name": "Bitcoin", "isin": "—", "ticker": "BTC-EUR", "asset_class": "Crypto", "sector": "Crypto", "region": "Global", "currency": "EUR", "mode": "PIC", "frequency": "", "purchase_date": "2025-03-01", "quantity": 0.42, "purchase_amount_eur": 21000.0, "price": 53535.44140625, "latest_date": "2026-06-10", "fx_to_eur": 1.0, "current_value_eur": 22484.885390625, "previous_value_eur": null, "last_update_return": null, "month_return": -12.658948873096133, "ytd_return": -29.101550456251456, "purchase_return": 7.070882812500012, "data_status": "OK", "weight": 7.884675308703064, "previous_weight": null, "last_update_contribution": null, "purchase_contribution": 0.5575161512245173}, {"instrument_id": "ETH_EUR", "name": "Ethereum", "isin": "—", "ticker": "ETH-EUR", "asset_class": "Crypto", "sector": "Crypto", "region": "Global", "currency": "EUR", "mode": "PAC", "frequency": "Mensile", "purchase_date": "2025-01-01", "quantity": 4.5, "purchase_amount_eur": 10500.0, "price": 1417.260009765625, "latest_date": "2026-06-10", "fx_to_eur": 1.0, "current_value_eur": 6377.6700439453125, "previous_value_eur": null, "last_update_return": null, "month_return": -17.6795785378294, "ytd_return": -44.49312648978007, "purchase_return": -39.260285295758926, "data_status": "OK", "weight": 2.236429345711378, "previous_weight": null, "last_update_contribution": null, "purchase_contribution": -0.8780285415643617}], "pac": [{"instrument_id": "SPY", "name": "SPDR S&P 500 ETF", "isin": "US78462F1030", "ticker": "SPY", "asset_class": "ETF Equity", "sector": "Broad Equity", "region": "USA", "currency": "USD", "mode": "PAC", "frequency": "Mensile", "purchase_date": "2025-01-01", "quantity": 85.0, "purchase_amount_eur": 41000.0, "price": 732.510009765625, "latest_date": "2026-06-10", "fx_to_eur": 0.86549993597952, "current_value_eur": 53888.92615730301, "previous_value_eur": null, "last_update_return": null, "month_return": -2.638532884161615, "ytd_return": 9.343102040707985, "purchase_return": 31.43640526171465, "data_status": "OK", "weight": 18.896991383472606, "previous_weight": null, "last_update_contribution": null, "purchase_contribution": 5.940534793579746}, {"instrument_id": "QQQ", "name": "Invesco QQQ ETF", "isin": "US46090E1038", "ticker": "QQQ", "asset_class": "ETF Equity", "sector": "Technology", "region": "USA", "currency": "USD", "mode": "PAC", "frequency": "Mensile", "purchase_date": "2025-01-01", "quantity": 60.0, "purchase_amount_eur": 23000.0, "price": 702.239990234375, "latest_date": "2026-06-10", "fx_to_eur": 0.86549993597952, "current_value_eur": 36467.31999540662, "previous_value_eur": null, "last_update_return": null, "month_return": -4.676326505055828, "ytd_return": 16.62978770659422, "purchase_return": 58.5535651974201, "data_status": "OK", "weight": 12.78783380689332, "previous_weight": null, "last_update_contribution": null, "purchase_contribution": 7.487732605457008}, {"instrument_id": "ETH_EUR", "name": "Ethereum", "isin": "—", "ticker": "ETH-EUR", "asset_class": "Crypto", "sector": "Crypto", "region": "Global", "currency": "EUR", "mode": "PAC", "frequency": "Mensile", "purchase_date": "2025-01-01", "quantity": 4.5, "purchase_amount_eur": 10500.0, "price": 1417.260009765625, "latest_date": "2026-06-10", "fx_to_eur": 1.0, "current_value_eur": 6377.6700439453125, "previous_value_eur": null, "last_update_return": null, "month_return": -17.6795785378294, "ytd_return": -44.49312648978007, "purchase_return": -39.260285295758926, "data_status": "OK", "weight": 2.236429345711378, "previous_weight": null, "last_update_contribution": null, "purchase_contribution": -0.8780285415643617}], "pic": [{"instrument_id": "AAPL", "name": "Apple", "isin": "US0378331005", "ticker": "AAPL", "asset_class": "Equity", "sector": "Information Technology", "region": "USA", "currency": "USD", "mode": "PIC", "frequency": "", "purchase_date": "2025-01-15", "quantity": 145.0, "purchase_amount_eur": 25000.0, "price": 289.3900146484375, "latest_date": "2026-06-10", "fx_to_eur": 0.86549993597952, "current_value_eur": 36317.72067694358, "previous_value_eur": null, "last_update_return": null, "month_return": -4.74793700294851, "ytd_return": 8.799406683688904, "purchase_return": 45.27088270777433, "data_status": "OK", "weight": 12.735374475569527, "previous_weight": null, "last_update_contribution": null, "purchase_contribution": 5.765416441230911}, {"instrument_id": "MSFT", "name": "Microsoft", "isin": "US5949181045", "ticker": "MSFT", "asset_class": "Equity", "sector": "Information Technology", "region": "USA", "currency": "USD", "mode": "PIC", "frequency": "", "purchase_date": "2025-02-03", "quantity": 70.0, "purchase_amount_eur": 24000.0, "price": 401.8599853515625, "latest_date": "2026-06-10", "fx_to_eur": 0.86549993597952, "current_value_eur": 24346.685411615574, "previous_value_eur": null, "last_update_return": null, "month_return": -12.02114632204976, "ytd_return": -13.199820850907496, "purchase_return": 1.4445225483982194, "data_status": "OK", "weight": 8.537544487274367, "previous_weight": null, "last_update_contribution": null, "purchase_contribution": 0.12332675519820739}, {"instrument_id": "NVDA", "name": "NVIDIA", "isin": "US67066G1040", "ticker": "NVDA", "asset_class": "Equity", "sector": "Semiconductors", "region": "USA", "currency": "USD", "mode": "PIC", "frequency": "", "purchase_date": "2025-03-12", "quantity": 180.0, "purchase_amount_eur": 18000.0, "price": 203.9600067138672, "latest_date": "2026-06-10", "fx_to_eur": 0.86549993597952, "current_value_eur": 31774.927095582214, "previous_value_eur": null, "last_update_return": null, "month_return": -8.239139760280366, "ytd_return": 9.971349490832559, "purchase_return": 76.52737275323452, "data_status": "OK", "weight": 11.14237314328659, "previous_weight": null, "last_update_contribution": null, "purchase_contribution": 8.526965428919222}, {"instrument_id": "BABA", "name": "Alibaba ADR", "isin": "US01609W1027", "ticker": "BABA", "asset_class": "Equity", "sector": "Consumer Discretionary", "region": "China", "currency": "USD", "mode": "PIC", "frequency": "", "purchase_date": "2025-04-18", "quantity": 210.0, "purchase_amount_eur": 16500.0, "price": 116.23999786376953, "latest_date": "2026-06-10", "fx_to_eur": 0.86549993597952, "current_value_eur": 21127.199248963934, "previous_value_eur": null, "last_update_return": null, "month_return": -6.543379557458396, "ytd_return": -24.093744429423147, "purchase_return": 28.043631811902635, "data_status": "OK", "weight": 7.4085815144875635, "previous_weight": null, "last_update_contribution": null, "purchase_contribution": 2.0776353224075725}, {"instrument_id": "AGG", "name": "iShares Core U.S. Aggregate Bond ETF", "isin": "US4642872265", "ticker": "AGG", "asset_class": "ETF Bond", "sector": "Aggregate Bonds", "region": "USA", "currency": "USD", "mode": "PIC", "frequency": "", "purchase_date": "2025-01-10", "quantity": 250.0, "purchase_amount_eur": 22000.0, "price": 98.44010162353516, "latest_date": "2026-06-10", "fx_to_eur": 0.86549993597952, "current_value_eur": 21299.975413246782, "previous_value_eur": null, "last_update_return": null, "month_return": 0.5761325718400379, "ytd_return": 1.927802137606105, "purchase_return": -3.1819299397873535, "data_status": "OK", "weight": 7.469168167823204, "previous_weight": null, "last_update_contribution": null, "purchase_contribution": -0.23766369818503302}, {"instrument_id": "GLD", "name": "SPDR Gold Shares", "isin": "US78463V1070", "ticker": "GLD", "asset_class": "ETF Commodity", "sector": "Gold", "region": "Global", "currency": "USD", "mode": "PIC", "frequency": "", "purchase_date": "2025-02-20", "quantity": 95.0, "purchase_amount_eur": 17000.0, "price": 378.0799865722656, "latest_date": "2026-06-10", "fx_to_eur": 0.86549993597952, "current_value_eur": 31086.679396476204, "previous_value_eur": null, "last_update_return": null, "month_return": -7.312914125183911, "ytd_return": -3.457764169332045, "purchase_return": 82.86281997927179, "data_status": "OK", "weight": 10.901028366778393, "previous_weight": null, "last_update_contribution": null, "purchase_contribution": 9.032899511452932}, {"instrument_id": "BTC_EUR", "name": "Bitcoin", "isin": "—", "ticker": "BTC-EUR", "asset_class": "Crypto", "sector": "Crypto", "region": "Global", "currency": "EUR", "mode": "PIC", "frequency": "", "purchase_date": "2025-03-01", "quantity": 0.42, "purchase_amount_eur": 21000.0, "price": 53535.44140625, "latest_date": "2026-06-10", "fx_to_eur": 1.0, "current_value_eur": 22484.885390625, "previous_value_eur": null, "last_update_return": null, "month_return": -12.658948873096133, "ytd_return": -29.101550456251456, "purchase_return": 7.070882812500012, "data_status": "OK", "weight": 7.884675308703064, "previous_weight": null, "last_update_contribution": null, "purchase_contribution": 0.5575161512245173}], "asset_allocation": {"Equity": 39.82387362061805, "ETF Equity": 31.684825190365927, "ETF Commodity": 10.901028366778393, "Crypto": 10.121104654414442, "ETF Bond": 7.469168167823204}, "sector_allocation": {"Information Technology": 21.272918962843892, "Broad Equity": 18.896991383472606, "Technology": 12.78783380689332, "Semiconductors": 11.14237314328659, "Gold": 10.901028366778393, "Crypto": 10.121104654414442, "Aggregate Bonds": 7.469168167823204, "Consumer Discretionary": 7.4085815144875635}, "currency_exposure": {"USD": 89.87889534558556, "EUR": 10.121104654414442}, "equity_curve": [{"date": "2025-01-01", "value": 100.0}, {"date": "2025-01-02", "value": 527.4885}, {"date": "2025-01-03", "value": 537.1057}, {"date": "2025-01-04", "value": 105.8306}, {"date": "2025-01-05", "value": 105.7604}, {"date": "2025-01-06", "value": 542.2648}, {"date": "2025-01-07", "value": 526.0299}, {"date": "2025-01-08", "value": 526.5949}, {"date": "2025-01-09", "value": 97.9258}, {"date": "2025-01-10", "value": 521.4416}, {"date": "2025-01-11", "value": 100.4619}, {"date": "2025-01-12", "value": 100.3781}, {"date": "2025-01-13", "value": 520.0435}, {"date": "2025-01-14", "value": 520.8311}, {"date": "2025-01-15", "value": 532.0948}, {"date": "2025-01-16", "value": 526.9252}, {"date": "2025-01-17", "value": 536.6715}, {"date": "2025-01-18", "value": 108.115}, {"date": "2025-01-19", "value": 104.6392}, {"date": "2025-01-20", "value": 104.4846}, {"date": "2025-01-21", "value": 531.886}, {"date": "2025-01-22", "value": 536.1849}, {"date": "2025-01-23", "value": 537.3903}, {"date": "2025-01-24", "value": 535.5238}, {"date": "2025-01-25", "value": 106.0464}, {"date": "2025-01-26", "value": 104.1997}, {"date": "2025-01-27", "value": 520.8623}, {"date": "2025-01-28", "value": 531.8939}, {"date": "2025-01-29", "value": 532.178}, {"date": "2025-01-30", "value": 534.6286}, {"date": "2025-01-31", "value": 530.8337}, {"date": "2025-02-01", "value": 102.7306}, {"date": "2025-02-02", "value": 99.5196}, {"date": "2025-02-03", "value": 528.5274}, {"date": "2025-02-04", "value": 526.2305}, {"date": "2025-02-05", "value": 525.6061}, {"date": "2025-02-06", "value": 526.3822}, {"date": "2025-02-07", "value": 524.6147}, {"date": "2025-02-08", "value": 95.8662}, {"date": "2025-02-09", "value": 96.0193}, {"date": "2025-02-10", "value": 535.6868}, {"date": "2025-02-11", "value": 534.9297}, {"date": "2025-02-12", "value": 536.6356}, {"date": "2025-02-13", "value": 539.12}, {"date": "2025-02-14", "value": 540.2555}, {"date": "2025-02-15", "value": 95.6999}, {"date": "2025-02-16", "value": 94.416}, {"date": "2025-02-17", "value": 94.7889}, {"date": "2025-02-18", "value": 539.8287}, {"date": "2025-02-19", "value": 543.4665}, {"date": "2025-02-20", "value": 549.4787}, {"date": "2025-02-21", "value": 541.4058}, {"date": "2025-02-22", "value": 95.8092}, {"date": "2025-02-23", "value": 95.9068}, {"date": "2025-02-24", "value": 530.0637}, {"date": "2025-02-25", "value": 526.3179}, {"date": "2025-02-26", "value": 521.5255}, {"date": "2025-02-27", "value": 513.8337}, {"date": "2025-02-28", "value": 520.9759}, {"date": "2025-03-01", "value": 83.9979}, {"date": "2025-03-02", "value": 92.4666}, {"date": "2025-03-03", "value": 511.5282}, {"date": "2025-03-04", "value": 507.4257}, {"date": "2025-03-05", "value": 511.081}, {"date": "2025-03-06", "value": 497.3539}, {"date": "2025-03-07", "value": 496.6355}, {"date": "2025-03-08", "value": 80.4507}, {"date": "2025-03-09", "value": 74.7234}, {"date": "2025-03-10", "value": 472.024}, {"date": "2025-03-11", "value": 476.7502}, {"date": "2025-03-12", "value": 476.6684}, {"date": "2025-03-13", "value": 472.5653}, {"date": "2025-03-14", "value": 483.5123}, {"date": "2025-03-15", "value": 76.4518}, {"date": "2025-03-16", "value": 75.0329}, {"date": "2025-03-17", "value": 485.846}, {"date": "2025-03-18", "value": 478.2213}, {"date": "2025-03-19", "value": 485.4562}, {"date": "2025-03-20", "value": 481.5694}, {"date": "2025-03-21", "value": 483.6887}, {"date": "2025-03-22", "value": 76.7191}, {"date": "2025-03-23", "value": 78.8058}, {"date": "2025-03-24", "value": 492.409}, {"date": "2025-03-25", "value": 494.542}, {"date": "2025-03-26", "value": 488.97}, {"date": "2025-03-27", "value": 491.6529}, {"date": "2025-03-28", "value": 478.8971}, {"date": "2025-03-29", "value": 74.6044}, {"date": "2025-03-30", "value": 74.6023}, {"date": "2025-03-31", "value": 478.0366}, {"date": "2025-04-01", "value": 483.4587}, {"date": "2025-04-02", "value": 480.8593}, {"date": "2025-04-03", "value": 460.4576}, {"date": "2025-04-04", "value": 436.3355}, {"date": "2025-04-05", "value": 74.523}, {"date": "2025-04-06", "value": 68.7718}, {"date": "2025-04-07", "value": 427.0032}, {"date": "2025-04-08", "value": 418.7491}, {"date": "2025-04-09", "value": 455.6962}, {"date": "2025-04-10", "value": 441.3067}, {"date": "2025-04-11", "value": 441.5319}, {"date": "2025-04-12", "value": 71.9387}, {"date": "2025-04-13", "value": 70.56}, {"date": "2025-04-14", "value": 444.0783}, {"date": "2025-04-15", "value": 443.2935}, {"date": "2025-04-16", "value": 435.2342}, {"date": "2025-04-17", "value": 432.4977}, {"date": "2025-04-18", "value": 70.8551}, {"date": "2025-04-19", "value": 71.4624}, {"date": "2025-04-20", "value": 70.878}, {"date": "2025-04-21", "value": 428.9966}, {"date": "2025-04-22", "value": 439.2053}, {"date": "2025-04-23", "value": 450.2655}, {"date": "2025-04-24", "value": 458.1229}, {"date": "2025-04-25", "value": 460.2145}, {"date": "2025-04-26", "value": 79.5704}, {"date": "2025-04-27", "value": 79.0717}, {"date": "2025-04-28", "value": 461.0187}, {"date": "2025-04-29", "value": 459.7231}, {"date": "2025-04-30", "value": 461.0045}, {"date": "2025-05-01", "value": 470.2199}, {"date": "2025-05-02", "value": 475.158}, {"date": "2025-05-03", "value": 81.1742}, {"date": "2025-05-04", "value": 79.7443}, {"date": "2025-05-05", "value": 471.6902}, {"date": "2025-05-06", "value": 473.4565}, {"date": "2025-05-07", "value": 471.6624}, {"date": "2025-05-08", "value": 482.5572}, {"date": "2025-05-09", "value": 486.3091}, {"date": "2025-05-10", "value": 93.4258}, {"date": "2025-05-11", "value": 92.6461}, {"date": "2025-05-12", "value": 500.2443}, {"date": "2025-05-13", "value": 510.6061}, {"date": "2025-05-14", "value": 508.3812}, {"date": "2025-05-15", "value": 505.7471}, {"date": "2025-05-16", "value": 505.6501}, {"date": "2025-05-17", "value": 92.2819}, {"date": "2025-05-18", "value": 94.5408}, {"date": "2025-05-19", "value": 507.2505}, {"date": "2025-05-20", "value": 506.1093}, {"date": "2025-05-21", "value": 500.8367}, {"date": "2025-05-22", "value": 501.4451}, {"date": "2025-05-23", "value": 495.6885}, {"date": "2025-05-24", "value": 94.2194}, {"date": "2025-05-25", "value": 95.205}, {"date": "2025-05-26", "value": 95.4604}, {"date": "2025-05-27", "value": 499.8652}, {"date": "2025-05-28", "value": 499.533}, {"date": "2025-05-29", "value": 502.495}, {"date": "2025-05-30", "value": 493.2697}, {"date": "2025-05-31", "value": 92.1853}, {"date": "2025-06-01", "value": 92.9034}, {"date": "2025-06-02", "value": 498.6104}, {"date": "2025-06-03", "value": 497.3253}, {"date": "2025-06-04", "value": 501.5137}, {"date": "2025-06-05", "value": 494.6653}, {"date": "2025-06-06", "value": 498.2712}, {"date": "2025-06-07", "value": 92.4195}, {"date": "2025-06-08", "value": 92.3763}, {"date": "2025-06-09", "value": 506.4287}, {"date": "2025-06-10", "value": 508.0995}, {"date": "2025-06-11", "value": 504.1467}, {"date": "2025-06-12", "value": 500.0649}, {"date": "2025-06-13", "value": 492.5718}, {"date": "2025-06-14", "value": 91.1798}, {"date": "2025-06-15", "value": 91.3332}, {"date": "2025-06-16", "value": 497.764}, {"date": "2025-06-17", "value": 494.4465}, {"date": "2025-06-18", "value": 497.2917}, {"date": "2025-06-19", "value": 90.8483}, {"date": "2025-06-20", "value": 493.5802}, {"date": "2025-06-21", "value": 87.4427}, {"date": "2025-06-22", "value": 86.2173}, {"date": "2025-06-23", "value": 497.8942}, {"date": "2025-06-24", "value": 498.5623}, {"date": "2025-06-25", "value": 500.1272}, {"date": "2025-06-26", "value": 498.8866}, {"date": "2025-06-27", "value": 498.8519}, {"date": "2025-06-28", "value": 90.4066}, {"date": "2025-06-29", "value": 91.5374}, {"date": "2025-06-30", "value": 500.0129}, {"date": "2025-07-01", "value": 495.0039}, {"date": "2025-07-02", "value": 499.7017}, {"date": "2025-07-03", "value": 502.6094}, {"date": "2025-07-04", "value": 90.9529}, {"date": "2025-07-05", "value": 91.1489}, {"date": "2025-07-06", "value": 92.1998}, {"date": "2025-07-07", "value": 499.0593}, {"date": "2025-07-08", "value": 502.1212}, {"date": "2025-07-09", "value": 506.8502}, {"date": "2025-07-10", "value": 513.0607}, {"date": "2025-07-11", "value": 515.2869}, {"date": "2025-07-12", "value": 101.1982}, {"date": "2025-07-13", "value": 102.5997}, {"date": "2025-07-14", "value": 518.0304}, {"date": "2025-07-15", "value": 523.3289}, {"date": "2025-07-16", "value": 528.1917}, {"date": "2025-07-17", "value": 531.033}, {"date": "2025-07-18", "value": 532.2938}, {"date": "2025-07-19", "value": 106.8423}, {"date": "2025-07-20", "value": 107.5973}, {"date": "2025-07-21", "value": 533.6092}, {"date": "2025-07-22", "value": 531.5729}, {"date": "2025-07-23", "value": 529.9533}, {"date": "2025-07-24", "value": 529.8329}, {"date": "2025-07-25", "value": 530.219}, {"date": "2025-07-26", "value": 106.8331}, {"date": "2025-07-27", "value": 108.7332}, {"date": "2025-07-28", "value": 533.5644}, {"date": "2025-07-29", "value": 537.958}, {"date": "2025-07-30", "value": 539.8857}, {"date": "2025-07-31", "value": 544.6383}, {"date": "2025-08-01", "value": 534.0226}, {"date": "2025-08-02", "value": 101.9836}, {"date": "2025-08-03", "value": 103.9494}, {"date": "2025-08-04", "value": 537.0619}, {"date": "2025-08-05", "value": 533.3681}, {"date": "2025-08-06", "value": 538.921}, {"date": "2025-08-07", "value": 541.0732}, {"date": "2025-08-08", "value": 544.7701}, {"date": "2025-08-09", "value": 110.5502}, {"date": "2025-08-10", "value": 112.4123}, {"date": "2025-08-11", "value": 546.8602}, {"date": "2025-08-12", "value": 555.6333}, {"date": "2025-08-13", "value": 557.9861}, {"date": "2025-08-14", "value": 550.5622}, {"date": "2025-08-15", "value": 549.0724}, {"date": "2025-08-16", "value": 111.8816}, {"date": "2025-08-17", "value": 112.1819}, {"date": "2025-08-18", "value": 545.4874}, {"date": "2025-08-19", "value": 538.4287}, {"date": "2025-08-20", "value": 540.364}, {"date": "2025-08-21", "value": 536.5089}, {"date": "2025-08-22", "value": 550.7975}, {"date": "2025-08-23", "value": 112.8234}, {"date": "2025-08-24", "value": 111.681}, {"date": "2025-08-25", "value": 540.1185}, {"date": "2025-08-26", "value": 547.8748}, {"date": "2025-08-27", "value": 546.3963}, {"date": "2025-08-28", "value": 547.2688}, {"date": "2025-08-29", "value": 544.379}, {"date": "2025-08-30", "value": 105.7737}, {"date": "2025-08-31", "value": 105.4717}, {"date": "2025-09-01", "value": 105.3862}, {"date": "2025-09-02", "value": 544.6332}, {"date": "2025-09-03", "value": 551.4026}, {"date": "2025-09-04", "value": 548.9203}, {"date": "2025-09-05", "value": 547.9036}, {"date": "2025-09-06", "value": 105.7419}, {"date": "2025-09-07", "value": 106.6447}, {"date": "2025-09-08", "value": 549.7418}, {"date": "2025-09-09", "value": 549.9477}, {"date": "2025-09-10", "value": 554.2183}, {"date": "2025-09-11", "value": 561.5283}, {"date": "2025-09-12", "value": 564.8206}, {"date": "2025-09-13", "value": 112.3154}, {"date": "2025-09-14", "value": 111.6034}, {"date": "2025-09-15", "value": 566.8467}, {"date": "2025-09-16", "value": 565.318}, {"date": "2025-09-17", "value": 561.6326}, {"date": "2025-09-18", "value": 564.7725}, {"date": "2025-09-19", "value": 569.1324}, {"date": "2025-09-20", "value": 110.6807}, {"date": "2025-09-21", "value": 110.286}, {"date": "2025-09-22", "value": 573.0121}, {"date": "2025-09-23", "value": 566.1282}, {"date": "2025-09-24", "value": 569.7109}, {"date": "2025-09-25", "value": 568.2982}, {"date": "2025-09-26", "value": 573.0537}, {"date": "2025-09-27", "value": 103.6465}, {"date": "2025-09-28", "value": 106.1692}, {"date": "2025-09-29", "value": 580.8453}, {"date": "2025-09-30", "value": 581.4765}, {"date": "2025-10-01", "value": 588.6308}, {"date": "2025-10-02", "value": 593.9934}, {"date": "2025-10-03", "value": 595.1749}, {"date": "2025-10-04", "value": 115.3651}, {"date": "2025-10-05", "value": 116.543}, {"date": "2025-10-06", "value": 600.7417}, {"date": "2025-10-07", "value": 594.4321}, {"date": "2025-10-08", "value": 602.5555}, {"date": "2025-10-09", "value": 597.6499}, {"date": "2025-10-10", "value": 575.1631}, {"date": "2025-10-11", "value": 103.1758}, {"date": "2025-10-12", "value": 109.3715}, {"date": "2025-10-13", "value": 587.7332}, {"date": "2025-10-14", "value": 582.6483}, {"date": "2025-10-15", "value": 581.3656}, {"date": "2025-10-16", "value": 576.9995}, {"date": "2025-10-17", "value": 575.6687}, {"date": "2025-10-18", "value": 101.4182}, {"date": "2025-10-19", "value": 103.0984}, {"date": "2025-10-20", "value": 590.0689}, {"date": "2025-10-21", "value": 582.3005}, {"date": "2025-10-22", "value": 580.7341}, {"date": "2025-10-23", "value": 586.3799}, {"date": "2025-10-24", "value": 591.6415}, {"date": "2025-10-25", "value": 105.1928}, {"date": "2025-10-26", "value": 108.5669}, {"date": "2025-10-27", "value": 600.3185}, {"date": "2025-10-28", "value": 601.0448}, {"date": "2025-10-29", "value": 601.5922}, {"date": "2025-10-30", "value": 596.6556}, {"date": "2025-10-31", "value": 596.7051}, {"date": "2025-11-01", "value": 103.8179}, {"date": "2025-11-02", "value": 105.0812}, {"date": "2025-11-03", "value": 595.921}, {"date": "2025-11-04", "value": 583.8359}, {"date": "2025-11-05", "value": 587.3806}, {"date": "2025-11-06", "value": 579.3854}, {"date": "2025-11-07", "value": 578.8204}, {"date": "2025-11-08", "value": 95.2083}, {"date": "2025-11-09", "value": 98.4444}, {"date": "2025-11-10", "value": 590.6379}, {"date": "2025-11-11", "value": 585.2464}, {"date": "2025-11-12", "value": 582.9901}, {"date": "2025-11-13", "value": 574.0275}, {"date": "2025-11-14", "value": 566.3308}, {"date": "2025-11-15", "value": 88.4586}, {"date": "2025-11-16", "value": 87.0433}, {"date": "2025-11-17", "value": 561.9102}, {"date": "2025-11-18", "value": 560.8575}, {"date": "2025-11-19", "value": 561.3231}, {"date": "2025-11-20", "value": 550.4396}, {"date": "2025-11-21", "value": 550.4864}, {"date": "2025-11-22", "value": 78.792}, {"date": "2025-11-23", "value": 80.6155}, {"date": "2025-11-24", "value": 564.0097}, {"date": "2025-11-25", "value": 561.7683}, {"date": "2025-11-26", "value": 566.0697}, {"date": "2025-11-27", "value": 84.5982}, {"date": "2025-11-28", "value": 566.6282}, {"date": "2025-11-29", "value": 84.1604}, {"date": "2025-11-30", "value": 83.8175}, {"date": "2025-12-01", "value": 564.7649}, {"date": "2025-12-02", "value": 570.025}, {"date": "2025-12-03", "value": 568.8326}, {"date": "2025-12-04", "value": 566.4196}, {"date": "2025-12-05", "value": 564.8191}, {"date": "2025-12-06", "value": 83.0947}, {"date": "2025-12-07", "value": 84.0453}, {"date": "2025-12-08", "value": 567.4673}, {"date": "2025-12-09", "value": 569.6396}, {"date": "2025-12-10", "value": 569.9436}, {"date": "2025-12-11", "value": 565.9037}, {"date": "2025-12-12", "value": 557.1333}, {"date": "2025-12-13", "value": 83.6851}, {"date": "2025-12-14", "value": 81.8412}, {"date": "2025-12-15", "value": 550.4098}, {"date": "2025-12-16", "value": 551.1104}, {"date": "2025-12-17", "value": 544.2752}, {"date": "2025-12-18", "value": 547.6641}, {"date": "2025-12-19", "value": 556.298}, {"date": "2025-12-20", "value": 81.5315}, {"date": "2025-12-21", "value": 81.9021}, {"date": "2025-12-22", "value": 559.8218}, {"date": "2025-12-23", "value": 559.9784}, {"date": "2025-12-24", "value": 559.1497}, {"date": "2025-12-25", "value": 79.7478}, {"date": "2025-12-26", "value": 561.1018}, {"date": "2025-12-27", "value": 80.516}, {"date": "2025-12-28", "value": 80.5555}, {"date": "2025-12-29", "value": 556.3024}, {"date": "2025-12-30", "value": 556.7168}, {"date": "2025-12-31", "value": 554.2281}, {"date": "2026-01-01", "value": 81.6846}, {"date": "2026-01-02", "value": 559.6604}, {"date": "2026-01-03", "value": 84.0264}, {"date": "2026-01-04", "value": 84.8436}, {"date": "2026-01-05", "value": 566.8684}, {"date": "2026-01-06", "value": 566.2301}, {"date": "2026-01-07", "value": 563.2182}, {"date": "2026-01-08", "value": 563.6323}, {"date": "2026-01-09", "value": 564.8056}, {"date": "2026-01-10", "value": 84.2274}, {"date": "2026-01-11", "value": 84.8764}, {"date": "2026-01-12", "value": 573.1292}, {"date": "2026-01-13", "value": 575.6047}, {"date": "2026-01-14", "value": 576.214}, {"date": "2026-01-15", "value": 575.913}, {"date": "2026-01-16", "value": 574.4372}, {"date": "2026-01-17", "value": 89.3196}, {"date": "2026-01-18", "value": 87.9779}, {"date": "2026-01-19", "value": 86.4365}, {"date": "2026-01-20", "value": 557.7267}, {"date": "2026-01-21", "value": 561.2067}, {"date": "2026-01-22", "value": 569.2248}, {"date": "2026-01-23", "value": 567.6713}, {"date": "2026-01-24", "value": 81.0288}, {"date": "2026-01-25", "value": 78.1617}, {"date": "2026-01-26", "value": 565.0915}, {"date": "2026-01-27", "value": 570.0596}, {"date": "2026-01-28", "value": 568.9711}, {"date": "2026-01-29", "value": 560.8671}, {"date": "2026-01-30", "value": 550.2919}, {"date": "2026-01-31", "value": 70.2178}, {"date": "2026-02-01", "value": 67.8863}, {"date": "2026-02-02", "value": 546.8838}, {"date": "2026-02-03", "value": 543.751}, {"date": "2026-02-04", "value": 537.8766}, {"date": "2026-02-05", "value": 522.0868}, {"date": "2026-02-06", "value": 541.7866}, {"date": "2026-02-07", "value": 61.6049}, {"date": "2026-02-08", "value": 62.2038}, {"date": "2026-02-09", "value": 544.1922}, {"date": "2026-02-10", "value": 538.9977}, {"date": "2026-02-11", "value": 537.8463}, {"date": "2026-02-12", "value": 526.8241}, {"date": "2026-02-13", "value": 528.0096}, {"date": "2026-02-14", "value": 61.6146}, {"date": "2026-02-15", "value": 60.1251}, {"date": "2026-02-16", "value": 60.4747}, {"date": "2026-02-17", "value": 527.3196}, {"date": "2026-02-18", "value": 530.3173}, {"date": "2026-02-19", "value": 531.5624}, {"date": "2026-02-20", "value": 537.0931}, {"date": "2026-02-21", "value": 60.0883}, {"date": "2026-02-22", "value": 59.482}, {"date": "2026-02-23", "value": 530.549}, {"date": "2026-02-24", "value": 534.5535}, {"date": "2026-02-25", "value": 542.9058}, {"date": "2026-02-26", "value": 535.5692}, {"date": "2026-02-27", "value": 528.0486}, {"date": "2026-02-28", "value": 59.163}, {"date": "2026-03-01", "value": 58.4221}, {"date": "2026-03-02", "value": 535.7797}, {"date": "2026-03-03", "value": 530.5373}, {"date": "2026-03-04", "value": 539.9555}, {"date": "2026-03-05", "value": 534.9703}, {"date": "2026-03-06", "value": 530.112}, {"date": "2026-03-07", "value": 60.408}, {"date": "2026-03-08", "value": 59.7524}, {"date": "2026-03-09", "value": 538.1553}, {"date": "2026-03-10", "value": 538.0988}, {"date": "2026-03-11", "value": 538.5329}, {"date": "2026-03-12", "value": 534.6434}, {"date": "2026-03-13", "value": 531.888}, {"date": "2026-03-14", "value": 64.8948}, {"date": "2026-03-15", "value": 66.7456}, {"date": "2026-03-16", "value": 544.1026}, {"date": "2026-03-17", "value": 540.5845}, {"date": "2026-03-18", "value": 529.062}, {"date": "2026-03-19", "value": 522.4088}, {"date": "2026-03-20", "value": 510.0832}, {"date": "2026-03-21", "value": 62.3353}, {"date": "2026-03-22", "value": 61.7033}, {"date": "2026-03-23", "value": 514.2372}, {"date": "2026-03-24", "value": 509.8889}, {"date": "2026-03-25", "value": 515.9801}, {"date": "2026-03-26", "value": 505.7738}, {"date": "2026-03-27", "value": 500.0477}, {"date": "2026-03-28", "value": 60.3084}, {"date": "2026-03-29", "value": 60.2514}, {"date": "2026-03-30", "value": 500.8899}, {"date": "2026-03-31", "value": 517.1028}, {"date": "2026-04-01", "value": 515.3938}, {"date": "2026-04-02", "value": 512.9701}, {"date": "2026-04-03", "value": 61.2932}, {"date": "2026-04-04", "value": 61.6346}, {"date": "2026-04-05", "value": 63.1814}, {"date": "2026-04-06", "value": 519.0991}, {"date": "2026-04-07", "value": 518.7994}, {"date": "2026-04-08", "value": 521.4613}, {"date": "2026-04-09", "value": 525.8292}, {"date": "2026-04-10", "value": 526.4211}, {"date": "2026-04-11", "value": 66.0513}, {"date": "2026-04-12", "value": 64.0985}, {"date": "2026-04-13", "value": 531.7696}, {"date": "2026-04-14", "value": 535.2596}, {"date": "2026-04-15", "value": 540.6205}, {"date": "2026-04-16", "value": 542.8947}, {"date": "2026-04-17", "value": 552.5138}, {"date": "2026-04-18", "value": 68.079}, {"date": "2026-04-19", "value": 66.3749}, {"date": "2026-04-20", "value": 551.5099}, {"date": "2026-04-21", "value": 544.3038}, {"date": "2026-04-22", "value": 554.4278}, {"date": "2026-04-23", "value": 550.107}, {"date": "2026-04-24", "value": 556.836}, {"date": "2026-04-25", "value": 69.401}, {"date": "2026-04-26", "value": 70.5823}, {"date": "2026-04-27", "value": 555.8867}, {"date": "2026-04-28", "value": 551.7232}, {"date": "2026-04-29", "value": 549.0557}, {"date": "2026-04-30", "value": 549.2031}, {"date": "2026-05-01", "value": 552.1913}, {"date": "2026-05-02", "value": 70.0573}, {"date": "2026-05-03", "value": 70.0332}, {"date": "2026-05-04", "value": 551.8049}, {"date": "2026-05-05", "value": 556.7508}, {"date": "2026-05-06", "value": 568.1599}, {"date": "2026-05-07", "value": 566.8203}, {"date": "2026-05-08", "value": 571.6583}, {"date": "2026-05-09", "value": 71.1393}, {"date": "2026-05-10", "value": 72.5573}, {"date": "2026-05-11", "value": 571.8146}, {"date": "2026-05-12", "value": 568.6712}, {"date": "2026-05-13", "value": 576.5251}, {"date": "2026-05-14", "value": 581.4526}, {"date": "2026-05-15", "value": 574.1496}, {"date": "2026-05-16", "value": 69.3111}, {"date": "2026-05-17", "value": 68.5264}, {"date": "2026-05-18", "value": 572.6653}, {"date": "2026-05-19", "value": 568.468}, {"date": "2026-05-20", "value": 575.9967}, {"date": "2026-05-21", "value": 573.9911}, {"date": "2026-05-22", "value": 571.7096}, {"date": "2026-05-23", "value": 67.9829}, {"date": "2026-05-24", "value": 67.8415}, {"date": "2026-05-25", "value": 68.1773}, {"date": "2026-05-26", "value": 572.4658}, {"date": "2026-05-27", "value": 569.281}, {"date": "2026-05-28", "value": 573.1215}, {"date": "2026-05-29", "value": 573.6464}, {"date": "2026-05-30", "value": 64.9461}, {"date": "2026-05-31", "value": 64.7945}, {"date": "2026-06-01", "value": 576.3699}, {"date": "2026-06-02", "value": 574.7173}, {"date": "2026-06-03", "value": 565.2101}, {"date": "2026-06-04", "value": 567.0267}, {"date": "2026-06-05", "value": 547.3843}, {"date": "2026-06-06", "value": 53.5326}, {"date": "2026-06-07", "value": 56.0359}, {"date": "2026-06-08", "value": 553.7561}, {"date": "2026-06-09", "value": 546.2132}, {"date": "2026-06-10", "value": 539.1655}], "errors": [], "data_status": {"ok": true, "missing_or_error": 0, "source": "Yahoo Finance via yfinance"}}};
+    const dashboardData = {"settings": {"portfolio_name": "Fladjellux Fund", "base_currency": "EUR", "start_date": "2025-01-01", "data_source": "Yahoo Finance via yfinance", "scheduled_updates": ["08:30 Europe/Rome", "13:00 Europe/Rome", "18:30 Europe/Rome"], "notes": "Demo. Replace CSV files with real portfolio holdings."}, "generated_at": "2026-06-10T15:20:44", "last_price_date": "2026-06-10", "portfolio": {"name": "Fladjellux Fund", "base_currency": "EUR", "total_value_eur": 284921.68881036906, "return_12m": 6.021029541643164, "counts": {"total_instruments": 10, "equity_etfs": 2, "single_stocks": 4, "bond_etfs": 1, "commodity_etfs": 1, "crypto": 2}, "holdings": [{"instrument_id": "AAPL", "name": "Apple", "isin": "US0378331005", "ticker": "AAPL", "asset_class": "Equity", "sector": "Information Technology", "region": "USA", "currency": "USD", "mode": "PIC", "frequency": "", "purchase_date": "2025-01-15", "quantity": 145.0, "purchase_amount_eur": 25000.0, "price": 290.2699890136719, "latest_date": "2026-06-10", "fx_to_eur": 0.86549993597952, "current_value_eur": 36428.1552516758, "return_12m": 42.22348669314051, "return_6m": 4.985767715937239, "return_1m": 1.020734962556924, "purchase_return": 45.712621006703216, "data_status": "OK", "weight": 12.785321961193599, "contribution_6m": 0.6374464547198244, "contribution_1m": 0.13050425133337165, "purchase_contribution": 5.844505772607225}, {"instrument_id": "MSFT", "name": "Microsoft", "isin": "US5949181045", "ticker": "MSFT", "asset_class": "Equity", "sector": "Information Technology", "region": "USA", "currency": "USD", "mode": "PIC", "frequency": "", "purchase_date": "2025-02-03", "quantity": 70.0, "purchase_amount_eur": 24000.0, "price": 402.0899963378906, "latest_date": "2026-06-10", "fx_to_eur": 0.86549993597952, "current_value_eur": 24360.620626191485, "return_12m": -14.872396536496069, "return_6m": -15.062326019995131, "return_1m": -0.5346233301857128, "purchase_return": 1.5025859424645294, "data_status": "OK", "weight": 8.549935502595174, "contribution_6m": -1.2878191599001945, "contribution_1m": -0.045709949912704884, "purchase_contribution": 0.1284701289517791}, {"instrument_id": "NVDA", "name": "NVIDIA", "isin": "US67066G1040", "ticker": "NVDA", "asset_class": "Equity", "sector": "Semiconductors", "region": "USA", "currency": "USD", "mode": "PIC", "frequency": "", "purchase_date": "2025-03-12", "quantity": 180.0, "purchase_amount_eur": 18000.0, "price": 202.40989685058594, "latest_date": "2026-06-10", "fx_to_eur": 0.86549993597952, "current_value_eur": 31533.43549784461, "return_12m": 39.263479057515596, "return_6m": 10.980486913053467, "return_1m": -5.936042090118077, "purchase_return": 75.18575276580339, "data_status": "OK", "weight": 11.06740439083661, "contribution_6m": 1.2152548907505187, "contribution_1m": -0.6569657829236374, "purchase_contribution": 8.321111302886083}, {"instrument_id": "BABA", "name": "Alibaba ADR", "isin": "US01609W1027", "ticker": "BABA", "asset_class": "Equity", "sector": "Consumer Discretionary", "region": "China", "currency": "USD", "mode": "PIC", "frequency": "", "purchase_date": "2025-04-18", "quantity": 210.0, "purchase_amount_eur": 16500.0, "price": 116.20999908447266, "latest_date": "2026-06-10", "fx_to_eur": 0.86549993597952, "current_value_eur": 21121.746821236145, "return_12m": -4.097658012833227, "return_6m": -26.358599078516686, "return_1m": -13.786679205815611, "purchase_return": 28.010586795370585, "data_status": "OK", "weight": 7.413176199195499, "contribution_6m": -1.9540093933299632, "contribution_1m": -1.022030821544958, "purchase_contribution": 2.07647415356941}, {"instrument_id": "SPY", "name": "SPDR S&P 500 ETF", "isin": "US78462F1030", "ticker": "SPY", "asset_class": "ETF Equity", "sector": "Broad Equity", "region": "USA", "currency": "USD", "mode": "PAC", "frequency": "Mensile", "purchase_date": "2025-01-01", "quantity": 85.0, "purchase_amount_eur": 41000.0, "price": 730.760009765625, "latest_date": "2026-06-10", "fx_to_eur": 0.86549993597952, "current_value_eur": 53760.18304182606, "return_12m": 21.22416180945399, "return_6m": 7.574030634087658, "return_1m": 0.6828491296221983, "purchase_return": 31.122397662990387, "data_status": "OK", "weight": 18.868406707222064, "contribution_6m": 1.4290989041692495, "contribution_1m": 0.12884275097384235, "purchase_contribution": 5.872300568092001}, {"instrument_id": "QQQ", "name": "Invesco QQQ ETF", "isin": "US46090E1038", "ticker": "QQQ", "asset_class": "ETF Equity", "sector": "Technology", "region": "USA", "currency": "USD", "mode": "PAC", "frequency": "Mensile", "purchase_date": "2025-01-01", "quantity": 60.0, "purchase_amount_eur": 23000.0, "price": 699.375, "latest_date": "2026-06-10", "fx_to_eur": 0.86549993597952, "current_value_eur": 36318.54106354061, "return_12m": 30.11707862264752, "return_6m": 12.437314675121058, "return_1m": -0.12761879848096624, "purchase_return": 57.90670027626352, "data_status": "OK", "weight": 12.74685027144865, "contribution_6m": 1.5853658794265915, "contribution_1m": -0.01626737716059055, "purchase_contribution": 7.3812803813518535}, {"instrument_id": "AGG", "name": "iShares Core U.S. Aggregate Bond ETF", "isin": "US4642872265", "ticker": "AGG", "asset_class": "ETF Bond", "sector": "Aggregate Bonds", "region": "USA", "currency": "USD", "mode": "PIC", "frequency": "", "purchase_date": "2025-01-10", "quantity": 250.0, "purchase_amount_eur": 22000.0, "price": 98.42500305175781, "latest_date": "2026-06-10", "fx_to_eur": 0.86549993597952, "current_value_eur": 21296.708460020112, "return_12m": 3.7329881188450376, "return_6m": 0.9368998165089515, "return_1m": 1.6895585149171, "purchase_return": -3.196779727181309, "data_status": "OK", "weight": 7.474583121046371, "contribution_6m": 0.07002935554589251, "contribution_1m": 0.1262874555761953, "purchase_contribution": -0.23894595790492637}, {"instrument_id": "GLD", "name": "SPDR Gold Shares", "isin": "US78463V1070", "ticker": "GLD", "asset_class": "ETF Commodity", "sector": "Gold", "region": "Global", "currency": "USD", "mode": "PIC", "frequency": "", "purchase_date": "2025-02-20", "quantity": 95.0, "purchase_amount_eur": 17000.0, "price": 378.447509765625, "latest_date": "2026-06-10", "fx_to_eur": 0.86549993597952, "current_value_eur": 31116.898070006933, "return_12m": 22.044116305642845, "return_6m": -2.0997047572832717, "return_1m": -11.311482199341661, "purchase_return": 83.04057688239372, "data_status": "OK", "weight": 10.92121073686213, "contribution_6m": -0.2293131813948256, "contribution_1m": -1.2353508084527502, "purchase_contribution": 9.069036398432235}, {"instrument_id": "BTC_EUR", "name": "Bitcoin", "isin": "—", "ticker": "BTC-EUR", "asset_class": "Crypto", "sector": "Crypto", "region": "Global", "currency": "EUR", "mode": "PIC", "frequency": "", "purchase_date": "2025-03-01", "quantity": 0.42, "purchase_amount_eur": 21000.0, "price": 53770.5, "latest_date": "2026-06-10", "fx_to_eur": 1.0, "current_value_eur": 22583.61, "return_12m": -44.22070454484671, "return_6m": -31.624729099226045, "return_1m": -22.967555291118636, "purchase_return": 7.540999999999998, "data_status": "OK", "weight": 7.926251628752147, "contribution_6m": -2.5066556053158586, "contribution_1m": -1.8204662253468409, "purchase_contribution": 0.5977186353241992}, {"instrument_id": "ETH_EUR", "name": "Ethereum", "isin": "—", "ticker": "ETH-EUR", "asset_class": "Crypto", "sector": "Crypto", "region": "Global", "currency": "EUR", "mode": "PAC", "frequency": "Mensile", "purchase_date": "2025-01-01", "quantity": 4.5, "purchase_amount_eur": 10500.0, "price": 1422.6199951171875, "latest_date": "2026-06-10", "fx_to_eur": 1.0, "current_value_eur": 6401.789978027344, "return_12m": -42.16704910646052, "return_6m": -49.94032754217256, "return_1m": -29.33661039435086, "purchase_return": -39.03057163783482, "data_status": "OK", "weight": 2.2468594808477653, "contribution_6m": -1.122088984147732, "contribution_1m": -0.6591524120048433, "purchase_contribution": -0.8769620992737706}], "pac": [{"instrument_id": "SPY", "name": "SPDR S&P 500 ETF", "isin": "US78462F1030", "ticker": "SPY", "asset_class": "ETF Equity", "sector": "Broad Equity", "region": "USA", "currency": "USD", "mode": "PAC", "frequency": "Mensile", "purchase_date": "2025-01-01", "quantity": 85.0, "purchase_amount_eur": 41000.0, "price": 730.760009765625, "latest_date": "2026-06-10", "fx_to_eur": 0.86549993597952, "current_value_eur": 53760.18304182606, "return_12m": 21.22416180945399, "return_6m": 7.574030634087658, "return_1m": 0.6828491296221983, "purchase_return": 31.122397662990387, "data_status": "OK", "weight": 18.868406707222064, "contribution_6m": 1.4290989041692495, "contribution_1m": 0.12884275097384235, "purchase_contribution": 5.872300568092001}, {"instrument_id": "QQQ", "name": "Invesco QQQ ETF", "isin": "US46090E1038", "ticker": "QQQ", "asset_class": "ETF Equity", "sector": "Technology", "region": "USA", "currency": "USD", "mode": "PAC", "frequency": "Mensile", "purchase_date": "2025-01-01", "quantity": 60.0, "purchase_amount_eur": 23000.0, "price": 699.375, "latest_date": "2026-06-10", "fx_to_eur": 0.86549993597952, "current_value_eur": 36318.54106354061, "return_12m": 30.11707862264752, "return_6m": 12.437314675121058, "return_1m": -0.12761879848096624, "purchase_return": 57.90670027626352, "data_status": "OK", "weight": 12.74685027144865, "contribution_6m": 1.5853658794265915, "contribution_1m": -0.01626737716059055, "purchase_contribution": 7.3812803813518535}, {"instrument_id": "ETH_EUR", "name": "Ethereum", "isin": "—", "ticker": "ETH-EUR", "asset_class": "Crypto", "sector": "Crypto", "region": "Global", "currency": "EUR", "mode": "PAC", "frequency": "Mensile", "purchase_date": "2025-01-01", "quantity": 4.5, "purchase_amount_eur": 10500.0, "price": 1422.6199951171875, "latest_date": "2026-06-10", "fx_to_eur": 1.0, "current_value_eur": 6401.789978027344, "return_12m": -42.16704910646052, "return_6m": -49.94032754217256, "return_1m": -29.33661039435086, "purchase_return": -39.03057163783482, "data_status": "OK", "weight": 2.2468594808477653, "contribution_6m": -1.122088984147732, "contribution_1m": -0.6591524120048433, "purchase_contribution": -0.8769620992737706}], "pic": [{"instrument_id": "AAPL", "name": "Apple", "isin": "US0378331005", "ticker": "AAPL", "asset_class": "Equity", "sector": "Information Technology", "region": "USA", "currency": "USD", "mode": "PIC", "frequency": "", "purchase_date": "2025-01-15", "quantity": 145.0, "purchase_amount_eur": 25000.0, "price": 290.2699890136719, "latest_date": "2026-06-10", "fx_to_eur": 0.86549993597952, "current_value_eur": 36428.1552516758, "return_12m": 42.22348669314051, "return_6m": 4.985767715937239, "return_1m": 1.020734962556924, "purchase_return": 45.712621006703216, "data_status": "OK", "weight": 12.785321961193599, "contribution_6m": 0.6374464547198244, "contribution_1m": 0.13050425133337165, "purchase_contribution": 5.844505772607225}, {"instrument_id": "MSFT", "name": "Microsoft", "isin": "US5949181045", "ticker": "MSFT", "asset_class": "Equity", "sector": "Information Technology", "region": "USA", "currency": "USD", "mode": "PIC", "frequency": "", "purchase_date": "2025-02-03", "quantity": 70.0, "purchase_amount_eur": 24000.0, "price": 402.0899963378906, "latest_date": "2026-06-10", "fx_to_eur": 0.86549993597952, "current_value_eur": 24360.620626191485, "return_12m": -14.872396536496069, "return_6m": -15.062326019995131, "return_1m": -0.5346233301857128, "purchase_return": 1.5025859424645294, "data_status": "OK", "weight": 8.549935502595174, "contribution_6m": -1.2878191599001945, "contribution_1m": -0.045709949912704884, "purchase_contribution": 0.1284701289517791}, {"instrument_id": "NVDA", "name": "NVIDIA", "isin": "US67066G1040", "ticker": "NVDA", "asset_class": "Equity", "sector": "Semiconductors", "region": "USA", "currency": "USD", "mode": "PIC", "frequency": "", "purchase_date": "2025-03-12", "quantity": 180.0, "purchase_amount_eur": 18000.0, "price": 202.40989685058594, "latest_date": "2026-06-10", "fx_to_eur": 0.86549993597952, "current_value_eur": 31533.43549784461, "return_12m": 39.263479057515596, "return_6m": 10.980486913053467, "return_1m": -5.936042090118077, "purchase_return": 75.18575276580339, "data_status": "OK", "weight": 11.06740439083661, "contribution_6m": 1.2152548907505187, "contribution_1m": -0.6569657829236374, "purchase_contribution": 8.321111302886083}, {"instrument_id": "BABA", "name": "Alibaba ADR", "isin": "US01609W1027", "ticker": "BABA", "asset_class": "Equity", "sector": "Consumer Discretionary", "region": "China", "currency": "USD", "mode": "PIC", "frequency": "", "purchase_date": "2025-04-18", "quantity": 210.0, "purchase_amount_eur": 16500.0, "price": 116.20999908447266, "latest_date": "2026-06-10", "fx_to_eur": 0.86549993597952, "current_value_eur": 21121.746821236145, "return_12m": -4.097658012833227, "return_6m": -26.358599078516686, "return_1m": -13.786679205815611, "purchase_return": 28.010586795370585, "data_status": "OK", "weight": 7.413176199195499, "contribution_6m": -1.9540093933299632, "contribution_1m": -1.022030821544958, "purchase_contribution": 2.07647415356941}, {"instrument_id": "AGG", "name": "iShares Core U.S. Aggregate Bond ETF", "isin": "US4642872265", "ticker": "AGG", "asset_class": "ETF Bond", "sector": "Aggregate Bonds", "region": "USA", "currency": "USD", "mode": "PIC", "frequency": "", "purchase_date": "2025-01-10", "quantity": 250.0, "purchase_amount_eur": 22000.0, "price": 98.42500305175781, "latest_date": "2026-06-10", "fx_to_eur": 0.86549993597952, "current_value_eur": 21296.708460020112, "return_12m": 3.7329881188450376, "return_6m": 0.9368998165089515, "return_1m": 1.6895585149171, "purchase_return": -3.196779727181309, "data_status": "OK", "weight": 7.474583121046371, "contribution_6m": 0.07002935554589251, "contribution_1m": 0.1262874555761953, "purchase_contribution": -0.23894595790492637}, {"instrument_id": "GLD", "name": "SPDR Gold Shares", "isin": "US78463V1070", "ticker": "GLD", "asset_class": "ETF Commodity", "sector": "Gold", "region": "Global", "currency": "USD", "mode": "PIC", "frequency": "", "purchase_date": "2025-02-20", "quantity": 95.0, "purchase_amount_eur": 17000.0, "price": 378.447509765625, "latest_date": "2026-06-10", "fx_to_eur": 0.86549993597952, "current_value_eur": 31116.898070006933, "return_12m": 22.044116305642845, "return_6m": -2.0997047572832717, "return_1m": -11.311482199341661, "purchase_return": 83.04057688239372, "data_status": "OK", "weight": 10.92121073686213, "contribution_6m": -0.2293131813948256, "contribution_1m": -1.2353508084527502, "purchase_contribution": 9.069036398432235}, {"instrument_id": "BTC_EUR", "name": "Bitcoin", "isin": "—", "ticker": "BTC-EUR", "asset_class": "Crypto", "sector": "Crypto", "region": "Global", "currency": "EUR", "mode": "PIC", "frequency": "", "purchase_date": "2025-03-01", "quantity": 0.42, "purchase_amount_eur": 21000.0, "price": 53770.5, "latest_date": "2026-06-10", "fx_to_eur": 1.0, "current_value_eur": 22583.61, "return_12m": -44.22070454484671, "return_6m": -31.624729099226045, "return_1m": -22.967555291118636, "purchase_return": 7.540999999999998, "data_status": "OK", "weight": 7.926251628752147, "contribution_6m": -2.5066556053158586, "contribution_1m": -1.8204662253468409, "purchase_contribution": 0.5977186353241992}], "asset_allocation": {"Equity": 39.815838053820876, "ETF Equity": 31.615256978670715, "ETF Commodity": 10.92121073686213, "Crypto": 10.173111109599912, "ETF Bond": 7.474583121046371}, "sector_allocation": {"Information Technology": 21.335257463788775, "Broad Equity": 18.868406707222064, "Technology": 12.74685027144865, "Semiconductors": 11.06740439083661, "Gold": 10.92121073686213, "Crypto": 10.173111109599912, "Aggregate Bonds": 7.474583121046371, "Consumer Discretionary": 7.413176199195499}, "currency_exposure": {"USD": 89.82688889040008, "EUR": 10.173111109599912}, "equity_curve": [{"date": "2025-01-01", "value": 100.0}, {"date": "2025-01-02", "value": 527.4885}, {"date": "2025-01-03", "value": 537.1057}, {"date": "2025-01-04", "value": 105.8306}, {"date": "2025-01-05", "value": 105.7604}, {"date": "2025-01-06", "value": 542.2648}, {"date": "2025-01-07", "value": 526.0299}, {"date": "2025-01-08", "value": 526.5949}, {"date": "2025-01-09", "value": 97.9258}, {"date": "2025-01-10", "value": 521.4416}, {"date": "2025-01-11", "value": 100.4619}, {"date": "2025-01-12", "value": 100.3781}, {"date": "2025-01-13", "value": 520.0435}, {"date": "2025-01-14", "value": 520.8311}, {"date": "2025-01-15", "value": 532.0949}, {"date": "2025-01-16", "value": 526.9252}, {"date": "2025-01-17", "value": 536.6715}, {"date": "2025-01-18", "value": 108.115}, {"date": "2025-01-19", "value": 104.6392}, {"date": "2025-01-20", "value": 104.4846}, {"date": "2025-01-21", "value": 531.886}, {"date": "2025-01-22", "value": 536.1849}, {"date": "2025-01-23", "value": 537.3903}, {"date": "2025-01-24", "value": 535.5238}, {"date": "2025-01-25", "value": 106.0464}, {"date": "2025-01-26", "value": 104.1997}, {"date": "2025-01-27", "value": 520.8623}, {"date": "2025-01-28", "value": 531.8939}, {"date": "2025-01-29", "value": 532.178}, {"date": "2025-01-30", "value": 534.6286}, {"date": "2025-01-31", "value": 530.8337}, {"date": "2025-02-01", "value": 102.7306}, {"date": "2025-02-02", "value": 99.5196}, {"date": "2025-02-03", "value": 528.5274}, {"date": "2025-02-04", "value": 526.2305}, {"date": "2025-02-05", "value": 525.6061}, {"date": "2025-02-06", "value": 526.3822}, {"date": "2025-02-07", "value": 524.6147}, {"date": "2025-02-08", "value": 95.8662}, {"date": "2025-02-09", "value": 96.0193}, {"date": "2025-02-10", "value": 535.6868}, {"date": "2025-02-11", "value": 534.9297}, {"date": "2025-02-12", "value": 536.6356}, {"date": "2025-02-13", "value": 539.12}, {"date": "2025-02-14", "value": 540.2555}, {"date": "2025-02-15", "value": 95.6999}, {"date": "2025-02-16", "value": 94.416}, {"date": "2025-02-17", "value": 94.7889}, {"date": "2025-02-18", "value": 539.8287}, {"date": "2025-02-19", "value": 543.4665}, {"date": "2025-02-20", "value": 549.4787}, {"date": "2025-02-21", "value": 541.4058}, {"date": "2025-02-22", "value": 95.8092}, {"date": "2025-02-23", "value": 95.9068}, {"date": "2025-02-24", "value": 530.0637}, {"date": "2025-02-25", "value": 526.3179}, {"date": "2025-02-26", "value": 521.5255}, {"date": "2025-02-27", "value": 513.8337}, {"date": "2025-02-28", "value": 520.9759}, {"date": "2025-03-01", "value": 83.9979}, {"date": "2025-03-02", "value": 92.4666}, {"date": "2025-03-03", "value": 511.5282}, {"date": "2025-03-04", "value": 507.4257}, {"date": "2025-03-05", "value": 511.081}, {"date": "2025-03-06", "value": 497.3539}, {"date": "2025-03-07", "value": 496.6355}, {"date": "2025-03-08", "value": 80.4507}, {"date": "2025-03-09", "value": 74.7234}, {"date": "2025-03-10", "value": 472.024}, {"date": "2025-03-11", "value": 476.7502}, {"date": "2025-03-12", "value": 476.6684}, {"date": "2025-03-13", "value": 472.5653}, {"date": "2025-03-14", "value": 483.5123}, {"date": "2025-03-15", "value": 76.4518}, {"date": "2025-03-16", "value": 75.0329}, {"date": "2025-03-17", "value": 485.846}, {"date": "2025-03-18", "value": 478.2213}, {"date": "2025-03-19", "value": 485.4563}, {"date": "2025-03-20", "value": 481.5694}, {"date": "2025-03-21", "value": 483.6887}, {"date": "2025-03-22", "value": 76.7191}, {"date": "2025-03-23", "value": 78.8058}, {"date": "2025-03-24", "value": 492.409}, {"date": "2025-03-25", "value": 494.542}, {"date": "2025-03-26", "value": 488.97}, {"date": "2025-03-27", "value": 491.6529}, {"date": "2025-03-28", "value": 478.8971}, {"date": "2025-03-29", "value": 74.6044}, {"date": "2025-03-30", "value": 74.6023}, {"date": "2025-03-31", "value": 478.0366}, {"date": "2025-04-01", "value": 483.4588}, {"date": "2025-04-02", "value": 480.8593}, {"date": "2025-04-03", "value": 460.4576}, {"date": "2025-04-04", "value": 436.3355}, {"date": "2025-04-05", "value": 74.523}, {"date": "2025-04-06", "value": 68.7718}, {"date": "2025-04-07", "value": 427.0032}, {"date": "2025-04-08", "value": 418.7491}, {"date": "2025-04-09", "value": 455.6962}, {"date": "2025-04-10", "value": 441.3067}, {"date": "2025-04-11", "value": 441.5319}, {"date": "2025-04-12", "value": 71.9387}, {"date": "2025-04-13", "value": 70.56}, {"date": "2025-04-14", "value": 444.0783}, {"date": "2025-04-15", "value": 443.2935}, {"date": "2025-04-16", "value": 435.2342}, {"date": "2025-04-17", "value": 432.4977}, {"date": "2025-04-18", "value": 70.8551}, {"date": "2025-04-19", "value": 71.4624}, {"date": "2025-04-20", "value": 70.878}, {"date": "2025-04-21", "value": 428.9966}, {"date": "2025-04-22", "value": 439.2053}, {"date": "2025-04-23", "value": 450.2655}, {"date": "2025-04-24", "value": 458.1229}, {"date": "2025-04-25", "value": 460.2145}, {"date": "2025-04-26", "value": 79.5704}, {"date": "2025-04-27", "value": 79.0717}, {"date": "2025-04-28", "value": 461.0187}, {"date": "2025-04-29", "value": 459.7231}, {"date": "2025-04-30", "value": 461.0045}, {"date": "2025-05-01", "value": 470.2199}, {"date": "2025-05-02", "value": 475.158}, {"date": "2025-05-03", "value": 81.1742}, {"date": "2025-05-04", "value": 79.7443}, {"date": "2025-05-05", "value": 471.6902}, {"date": "2025-05-06", "value": 473.4565}, {"date": "2025-05-07", "value": 471.6624}, {"date": "2025-05-08", "value": 482.5572}, {"date": "2025-05-09", "value": 486.3091}, {"date": "2025-05-10", "value": 93.4258}, {"date": "2025-05-11", "value": 92.6461}, {"date": "2025-05-12", "value": 500.2443}, {"date": "2025-05-13", "value": 510.6061}, {"date": "2025-05-14", "value": 508.3812}, {"date": "2025-05-15", "value": 505.7471}, {"date": "2025-05-16", "value": 505.6501}, {"date": "2025-05-17", "value": 92.2819}, {"date": "2025-05-18", "value": 94.5408}, {"date": "2025-05-19", "value": 507.2506}, {"date": "2025-05-20", "value": 506.1092}, {"date": "2025-05-21", "value": 500.8368}, {"date": "2025-05-22", "value": 501.4451}, {"date": "2025-05-23", "value": 495.6885}, {"date": "2025-05-24", "value": 94.2194}, {"date": "2025-05-25", "value": 95.205}, {"date": "2025-05-26", "value": 95.4604}, {"date": "2025-05-27", "value": 499.8652}, {"date": "2025-05-28", "value": 499.533}, {"date": "2025-05-29", "value": 502.495}, {"date": "2025-05-30", "value": 493.2697}, {"date": "2025-05-31", "value": 92.1853}, {"date": "2025-06-01", "value": 92.9034}, {"date": "2025-06-02", "value": 498.6104}, {"date": "2025-06-03", "value": 497.3253}, {"date": "2025-06-04", "value": 501.5138}, {"date": "2025-06-05", "value": 494.6653}, {"date": "2025-06-06", "value": 498.2712}, {"date": "2025-06-07", "value": 92.4195}, {"date": "2025-06-08", "value": 92.3763}, {"date": "2025-06-09", "value": 506.4287}, {"date": "2025-06-10", "value": 508.0995}, {"date": "2025-06-11", "value": 504.1467}, {"date": "2025-06-12", "value": 500.0649}, {"date": "2025-06-13", "value": 492.5718}, {"date": "2025-06-14", "value": 91.1798}, {"date": "2025-06-15", "value": 91.3332}, {"date": "2025-06-16", "value": 497.764}, {"date": "2025-06-17", "value": 494.4465}, {"date": "2025-06-18", "value": 497.2917}, {"date": "2025-06-19", "value": 90.8483}, {"date": "2025-06-20", "value": 493.5802}, {"date": "2025-06-21", "value": 87.4427}, {"date": "2025-06-22", "value": 86.2173}, {"date": "2025-06-23", "value": 497.8942}, {"date": "2025-06-24", "value": 498.5623}, {"date": "2025-06-25", "value": 500.1272}, {"date": "2025-06-26", "value": 498.8866}, {"date": "2025-06-27", "value": 498.8519}, {"date": "2025-06-28", "value": 90.4066}, {"date": "2025-06-29", "value": 91.5374}, {"date": "2025-06-30", "value": 500.0129}, {"date": "2025-07-01", "value": 495.0039}, {"date": "2025-07-02", "value": 499.7017}, {"date": "2025-07-03", "value": 502.6094}, {"date": "2025-07-04", "value": 90.9529}, {"date": "2025-07-05", "value": 91.1489}, {"date": "2025-07-06", "value": 92.1998}, {"date": "2025-07-07", "value": 499.0593}, {"date": "2025-07-08", "value": 502.1212}, {"date": "2025-07-09", "value": 506.8502}, {"date": "2025-07-10", "value": 513.0607}, {"date": "2025-07-11", "value": 515.2869}, {"date": "2025-07-12", "value": 101.1982}, {"date": "2025-07-13", "value": 102.5997}, {"date": "2025-07-14", "value": 518.0304}, {"date": "2025-07-15", "value": 523.3289}, {"date": "2025-07-16", "value": 528.1917}, {"date": "2025-07-17", "value": 531.033}, {"date": "2025-07-18", "value": 532.2938}, {"date": "2025-07-19", "value": 106.8423}, {"date": "2025-07-20", "value": 107.5973}, {"date": "2025-07-21", "value": 533.6092}, {"date": "2025-07-22", "value": 531.5728}, {"date": "2025-07-23", "value": 529.9533}, {"date": "2025-07-24", "value": 529.8329}, {"date": "2025-07-25", "value": 530.2191}, {"date": "2025-07-26", "value": 106.8331}, {"date": "2025-07-27", "value": 108.7332}, {"date": "2025-07-28", "value": 533.5644}, {"date": "2025-07-29", "value": 537.958}, {"date": "2025-07-30", "value": 539.8857}, {"date": "2025-07-31", "value": 544.6383}, {"date": "2025-08-01", "value": 534.0226}, {"date": "2025-08-02", "value": 101.9836}, {"date": "2025-08-03", "value": 103.9494}, {"date": "2025-08-04", "value": 537.0619}, {"date": "2025-08-05", "value": 533.3681}, {"date": "2025-08-06", "value": 538.921}, {"date": "2025-08-07", "value": 541.0732}, {"date": "2025-08-08", "value": 544.7701}, {"date": "2025-08-09", "value": 110.5502}, {"date": "2025-08-10", "value": 112.4123}, {"date": "2025-08-11", "value": 546.8602}, {"date": "2025-08-12", "value": 555.6333}, {"date": "2025-08-13", "value": 557.9861}, {"date": "2025-08-14", "value": 550.5622}, {"date": "2025-08-15", "value": 549.0724}, {"date": "2025-08-16", "value": 111.8816}, {"date": "2025-08-17", "value": 112.1819}, {"date": "2025-08-18", "value": 545.4874}, {"date": "2025-08-19", "value": 538.4287}, {"date": "2025-08-20", "value": 540.3641}, {"date": "2025-08-21", "value": 536.5089}, {"date": "2025-08-22", "value": 550.7975}, {"date": "2025-08-23", "value": 112.8234}, {"date": "2025-08-24", "value": 111.681}, {"date": "2025-08-25", "value": 540.1185}, {"date": "2025-08-26", "value": 547.8748}, {"date": "2025-08-27", "value": 546.3963}, {"date": "2025-08-28", "value": 547.2688}, {"date": "2025-08-29", "value": 544.3789}, {"date": "2025-08-30", "value": 105.7737}, {"date": "2025-08-31", "value": 105.4717}, {"date": "2025-09-01", "value": 105.3862}, {"date": "2025-09-02", "value": 544.6332}, {"date": "2025-09-03", "value": 551.4025}, {"date": "2025-09-04", "value": 548.9203}, {"date": "2025-09-05", "value": 547.9036}, {"date": "2025-09-06", "value": 105.7419}, {"date": "2025-09-07", "value": 106.6447}, {"date": "2025-09-08", "value": 549.7419}, {"date": "2025-09-09", "value": 549.9477}, {"date": "2025-09-10", "value": 554.2184}, {"date": "2025-09-11", "value": 561.5283}, {"date": "2025-09-12", "value": 564.8206}, {"date": "2025-09-13", "value": 112.3154}, {"date": "2025-09-14", "value": 111.6034}, {"date": "2025-09-15", "value": 566.8467}, {"date": "2025-09-16", "value": 565.318}, {"date": "2025-09-17", "value": 561.6326}, {"date": "2025-09-18", "value": 564.7725}, {"date": "2025-09-19", "value": 569.1324}, {"date": "2025-09-20", "value": 110.6807}, {"date": "2025-09-21", "value": 110.286}, {"date": "2025-09-22", "value": 573.0121}, {"date": "2025-09-23", "value": 566.1282}, {"date": "2025-09-24", "value": 569.7109}, {"date": "2025-09-25", "value": 568.2981}, {"date": "2025-09-26", "value": 573.0537}, {"date": "2025-09-27", "value": 103.6465}, {"date": "2025-09-28", "value": 106.1692}, {"date": "2025-09-29", "value": 580.8453}, {"date": "2025-09-30", "value": 581.4765}, {"date": "2025-10-01", "value": 588.6308}, {"date": "2025-10-02", "value": 593.9934}, {"date": "2025-10-03", "value": 595.1749}, {"date": "2025-10-04", "value": 115.3651}, {"date": "2025-10-05", "value": 116.543}, {"date": "2025-10-06", "value": 600.7417}, {"date": "2025-10-07", "value": 594.4321}, {"date": "2025-10-08", "value": 602.5555}, {"date": "2025-10-09", "value": 597.6499}, {"date": "2025-10-10", "value": 575.1631}, {"date": "2025-10-11", "value": 103.1758}, {"date": "2025-10-12", "value": 109.3715}, {"date": "2025-10-13", "value": 587.7332}, {"date": "2025-10-14", "value": 582.6483}, {"date": "2025-10-15", "value": 581.3656}, {"date": "2025-10-16", "value": 576.9995}, {"date": "2025-10-17", "value": 575.6687}, {"date": "2025-10-18", "value": 101.4182}, {"date": "2025-10-19", "value": 103.0984}, {"date": "2025-10-20", "value": 590.0689}, {"date": "2025-10-21", "value": 582.3005}, {"date": "2025-10-22", "value": 580.7341}, {"date": "2025-10-23", "value": 586.3799}, {"date": "2025-10-24", "value": 591.6415}, {"date": "2025-10-25", "value": 105.1928}, {"date": "2025-10-26", "value": 108.5669}, {"date": "2025-10-27", "value": 600.3185}, {"date": "2025-10-28", "value": 601.0448}, {"date": "2025-10-29", "value": 601.5922}, {"date": "2025-10-30", "value": 596.6556}, {"date": "2025-10-31", "value": 596.7051}, {"date": "2025-11-01", "value": 103.8179}, {"date": "2025-11-02", "value": 105.0812}, {"date": "2025-11-03", "value": 595.921}, {"date": "2025-11-04", "value": 583.8359}, {"date": "2025-11-05", "value": 587.3806}, {"date": "2025-11-06", "value": 579.3854}, {"date": "2025-11-07", "value": 578.8204}, {"date": "2025-11-08", "value": 95.2083}, {"date": "2025-11-09", "value": 98.4444}, {"date": "2025-11-10", "value": 590.6379}, {"date": "2025-11-11", "value": 585.2464}, {"date": "2025-11-12", "value": 582.9901}, {"date": "2025-11-13", "value": 574.0275}, {"date": "2025-11-14", "value": 566.3308}, {"date": "2025-11-15", "value": 88.4586}, {"date": "2025-11-16", "value": 87.0433}, {"date": "2025-11-17", "value": 561.9102}, {"date": "2025-11-18", "value": 560.8575}, {"date": "2025-11-19", "value": 561.3231}, {"date": "2025-11-20", "value": 550.4396}, {"date": "2025-11-21", "value": 550.4864}, {"date": "2025-11-22", "value": 78.792}, {"date": "2025-11-23", "value": 80.6155}, {"date": "2025-11-24", "value": 564.0097}, {"date": "2025-11-25", "value": 561.7683}, {"date": "2025-11-26", "value": 566.0697}, {"date": "2025-11-27", "value": 84.5982}, {"date": "2025-11-28", "value": 566.6282}, {"date": "2025-11-29", "value": 84.1604}, {"date": "2025-11-30", "value": 83.8175}, {"date": "2025-12-01", "value": 564.7649}, {"date": "2025-12-02", "value": 570.0249}, {"date": "2025-12-03", "value": 568.8326}, {"date": "2025-12-04", "value": 566.4196}, {"date": "2025-12-05", "value": 564.8191}, {"date": "2025-12-06", "value": 83.0947}, {"date": "2025-12-07", "value": 84.0453}, {"date": "2025-12-08", "value": 567.4673}, {"date": "2025-12-09", "value": 569.6396}, {"date": "2025-12-10", "value": 569.9436}, {"date": "2025-12-11", "value": 565.9037}, {"date": "2025-12-12", "value": 557.1333}, {"date": "2025-12-13", "value": 83.6851}, {"date": "2025-12-14", "value": 81.8412}, {"date": "2025-12-15", "value": 550.4098}, {"date": "2025-12-16", "value": 551.1104}, {"date": "2025-12-17", "value": 544.2752}, {"date": "2025-12-18", "value": 547.6641}, {"date": "2025-12-19", "value": 556.298}, {"date": "2025-12-20", "value": 81.5315}, {"date": "2025-12-21", "value": 81.9021}, {"date": "2025-12-22", "value": 559.8218}, {"date": "2025-12-23", "value": 559.9784}, {"date": "2025-12-24", "value": 559.1497}, {"date": "2025-12-25", "value": 79.7478}, {"date": "2025-12-26", "value": 561.1018}, {"date": "2025-12-27", "value": 80.516}, {"date": "2025-12-28", "value": 80.5555}, {"date": "2025-12-29", "value": 556.3024}, {"date": "2025-12-30", "value": 556.7168}, {"date": "2025-12-31", "value": 554.2281}, {"date": "2026-01-01", "value": 81.6846}, {"date": "2026-01-02", "value": 559.6604}, {"date": "2026-01-03", "value": 84.0264}, {"date": "2026-01-04", "value": 84.8436}, {"date": "2026-01-05", "value": 566.8684}, {"date": "2026-01-06", "value": 566.2301}, {"date": "2026-01-07", "value": 563.2182}, {"date": "2026-01-08", "value": 563.6323}, {"date": "2026-01-09", "value": 564.8056}, {"date": "2026-01-10", "value": 84.2274}, {"date": "2026-01-11", "value": 84.8764}, {"date": "2026-01-12", "value": 573.1292}, {"date": "2026-01-13", "value": 575.6047}, {"date": "2026-01-14", "value": 576.214}, {"date": "2026-01-15", "value": 575.913}, {"date": "2026-01-16", "value": 574.4372}, {"date": "2026-01-17", "value": 89.3196}, {"date": "2026-01-18", "value": 87.9779}, {"date": "2026-01-19", "value": 86.4365}, {"date": "2026-01-20", "value": 557.7267}, {"date": "2026-01-21", "value": 561.2067}, {"date": "2026-01-22", "value": 569.2248}, {"date": "2026-01-23", "value": 567.6713}, {"date": "2026-01-24", "value": 81.0288}, {"date": "2026-01-25", "value": 78.1617}, {"date": "2026-01-26", "value": 565.0915}, {"date": "2026-01-27", "value": 570.0596}, {"date": "2026-01-28", "value": 568.9711}, {"date": "2026-01-29", "value": 560.8671}, {"date": "2026-01-30", "value": 550.2919}, {"date": "2026-01-31", "value": 70.2178}, {"date": "2026-02-01", "value": 67.8863}, {"date": "2026-02-02", "value": 546.8838}, {"date": "2026-02-03", "value": 543.751}, {"date": "2026-02-04", "value": 537.8766}, {"date": "2026-02-05", "value": 522.0868}, {"date": "2026-02-06", "value": 541.7866}, {"date": "2026-02-07", "value": 61.6049}, {"date": "2026-02-08", "value": 62.2038}, {"date": "2026-02-09", "value": 544.1922}, {"date": "2026-02-10", "value": 538.9977}, {"date": "2026-02-11", "value": 537.8463}, {"date": "2026-02-12", "value": 526.8241}, {"date": "2026-02-13", "value": 528.0097}, {"date": "2026-02-14", "value": 61.6146}, {"date": "2026-02-15", "value": 60.1251}, {"date": "2026-02-16", "value": 60.4747}, {"date": "2026-02-17", "value": 527.3196}, {"date": "2026-02-18", "value": 530.3173}, {"date": "2026-02-19", "value": 531.5624}, {"date": "2026-02-20", "value": 537.0931}, {"date": "2026-02-21", "value": 60.0883}, {"date": "2026-02-22", "value": 59.482}, {"date": "2026-02-23", "value": 530.549}, {"date": "2026-02-24", "value": 534.5535}, {"date": "2026-02-25", "value": 542.9058}, {"date": "2026-02-26", "value": 535.5692}, {"date": "2026-02-27", "value": 528.0486}, {"date": "2026-02-28", "value": 59.163}, {"date": "2026-03-01", "value": 58.4221}, {"date": "2026-03-02", "value": 535.7797}, {"date": "2026-03-03", "value": 530.5373}, {"date": "2026-03-04", "value": 539.9555}, {"date": "2026-03-05", "value": 534.9703}, {"date": "2026-03-06", "value": 530.112}, {"date": "2026-03-07", "value": 60.408}, {"date": "2026-03-08", "value": 59.7524}, {"date": "2026-03-09", "value": 538.1553}, {"date": "2026-03-10", "value": 538.0988}, {"date": "2026-03-11", "value": 538.5329}, {"date": "2026-03-12", "value": 534.6434}, {"date": "2026-03-13", "value": 531.888}, {"date": "2026-03-14", "value": 64.8948}, {"date": "2026-03-15", "value": 66.7456}, {"date": "2026-03-16", "value": 544.1026}, {"date": "2026-03-17", "value": 540.5845}, {"date": "2026-03-18", "value": 529.062}, {"date": "2026-03-19", "value": 522.4088}, {"date": "2026-03-20", "value": 510.0832}, {"date": "2026-03-21", "value": 62.3353}, {"date": "2026-03-22", "value": 61.7033}, {"date": "2026-03-23", "value": 514.2372}, {"date": "2026-03-24", "value": 509.8889}, {"date": "2026-03-25", "value": 515.9801}, {"date": "2026-03-26", "value": 505.7738}, {"date": "2026-03-27", "value": 500.0477}, {"date": "2026-03-28", "value": 60.3084}, {"date": "2026-03-29", "value": 60.2514}, {"date": "2026-03-30", "value": 500.8899}, {"date": "2026-03-31", "value": 517.1028}, {"date": "2026-04-01", "value": 515.3938}, {"date": "2026-04-02", "value": 512.9701}, {"date": "2026-04-03", "value": 61.2932}, {"date": "2026-04-04", "value": 61.6346}, {"date": "2026-04-05", "value": 63.1814}, {"date": "2026-04-06", "value": 519.0991}, {"date": "2026-04-07", "value": 518.7994}, {"date": "2026-04-08", "value": 521.4613}, {"date": "2026-04-09", "value": 525.8292}, {"date": "2026-04-10", "value": 526.4211}, {"date": "2026-04-11", "value": 66.0513}, {"date": "2026-04-12", "value": 64.0985}, {"date": "2026-04-13", "value": 531.7696}, {"date": "2026-04-14", "value": 535.2596}, {"date": "2026-04-15", "value": 540.6205}, {"date": "2026-04-16", "value": 542.8947}, {"date": "2026-04-17", "value": 552.5138}, {"date": "2026-04-18", "value": 68.079}, {"date": "2026-04-19", "value": 66.3749}, {"date": "2026-04-20", "value": 551.5099}, {"date": "2026-04-21", "value": 544.3038}, {"date": "2026-04-22", "value": 554.4278}, {"date": "2026-04-23", "value": 550.107}, {"date": "2026-04-24", "value": 556.836}, {"date": "2026-04-25", "value": 69.401}, {"date": "2026-04-26", "value": 70.5823}, {"date": "2026-04-27", "value": 555.8867}, {"date": "2026-04-28", "value": 551.7232}, {"date": "2026-04-29", "value": 549.0557}, {"date": "2026-04-30", "value": 549.2031}, {"date": "2026-05-01", "value": 552.1913}, {"date": "2026-05-02", "value": 70.0573}, {"date": "2026-05-03", "value": 70.0332}, {"date": "2026-05-04", "value": 551.8049}, {"date": "2026-05-05", "value": 556.7508}, {"date": "2026-05-06", "value": 568.1599}, {"date": "2026-05-07", "value": 566.8203}, {"date": "2026-05-08", "value": 571.6583}, {"date": "2026-05-09", "value": 71.1393}, {"date": "2026-05-10", "value": 72.5573}, {"date": "2026-05-11", "value": 571.8146}, {"date": "2026-05-12", "value": 568.6712}, {"date": "2026-05-13", "value": 576.5251}, {"date": "2026-05-14", "value": 581.4526}, {"date": "2026-05-15", "value": 574.1496}, {"date": "2026-05-16", "value": 69.3111}, {"date": "2026-05-17", "value": 68.5264}, {"date": "2026-05-18", "value": 572.6653}, {"date": "2026-05-19", "value": 568.468}, {"date": "2026-05-20", "value": 575.9967}, {"date": "2026-05-21", "value": 573.9911}, {"date": "2026-05-22", "value": 571.7096}, {"date": "2026-05-23", "value": 67.9829}, {"date": "2026-05-24", "value": 67.8415}, {"date": "2026-05-25", "value": 68.1773}, {"date": "2026-05-26", "value": 572.4658}, {"date": "2026-05-27", "value": 569.281}, {"date": "2026-05-28", "value": 573.1215}, {"date": "2026-05-29", "value": 573.6464}, {"date": "2026-05-30", "value": 64.9461}, {"date": "2026-05-31", "value": 64.7945}, {"date": "2026-06-01", "value": 576.3699}, {"date": "2026-06-02", "value": 574.7173}, {"date": "2026-06-03", "value": 565.2101}, {"date": "2026-06-04", "value": 567.0267}, {"date": "2026-06-05", "value": 547.3843}, {"date": "2026-06-06", "value": 53.5326}, {"date": "2026-06-07", "value": 56.0359}, {"date": "2026-06-08", "value": 553.7561}, {"date": "2026-06-09", "value": 546.2132}, {"date": "2026-06-10", "value": 538.6923}], "errors": [], "data_status": {"ok": true, "missing_or_error": 0, "source": "Yahoo Finance via yfinance"}}};
     const data = dashboardData;
     const portfolio = data.portfolio;
+
     let selectedEquityRange = "all";
+    let selectedContributionRange = "6m";
+
     const palette = ["#2563eb", "#15d0a1", "#8b5cf6", "#f59e0b", "#06b6d4", "#ef4444", "#64748b", "#22c55e"];
 
     function fmtPct(x, decimals = 2) {
@@ -353,12 +668,18 @@
 
     function fmtEur(x) {
       if (x === null || x === undefined || Number.isNaN(x)) return "—";
-      return x.toLocaleString("it-IT", {style:"currency", currency:"EUR", maximumFractionDigits:0});
+      return x.toLocaleString("it-IT", {
+        style: "currency",
+        currency: "EUR",
+        maximumFractionDigits: 0
+      });
     }
 
     function fmtNum(x, decimals = 2) {
       if (x === null || x === undefined || Number.isNaN(x)) return "—";
-      return x.toLocaleString("it-IT", {maximumFractionDigits:decimals});
+      return x.toLocaleString("it-IT", {
+        maximumFractionDigits: decimals
+      });
     }
 
     function badgeClass(x) {
@@ -376,17 +697,34 @@
 
       const latest = new Date(rows[rows.length - 1].date);
       const cutoff = new Date(latest);
+      let visible;
 
-      if (range === "1y") cutoff.setFullYear(cutoff.getFullYear() - 1);
-      else if (range === "6m") cutoff.setMonth(cutoff.getMonth() - 6);
-      else if (range === "1m") cutoff.setMonth(cutoff.getMonth() - 1);
-      else return rows;
+      if (range === "1y") {
+        cutoff.setFullYear(cutoff.getFullYear() - 1);
+        visible = rows.filter(r => new Date(r.date) >= cutoff);
+      } else if (range === "6m") {
+        cutoff.setMonth(cutoff.getMonth() - 6);
+        visible = rows.filter(r => new Date(r.date) >= cutoff);
+      } else if (range === "1m") {
+        cutoff.setMonth(cutoff.getMonth() - 1);
+        visible = rows.filter(r => new Date(r.date) >= cutoff);
+      } else {
+        visible = rows;
+      }
 
-      return rows.filter(r => new Date(r.date) >= cutoff);
+      if (!visible.length) return [];
+
+      const base = visible[0].value;
+
+      return visible.map(r => ({
+        date: r.date,
+        value: base ? (r.value / base) * 100 : r.value
+      }));
     }
 
     function getSmartYAxisRange(values) {
       if (!values.length) return [90, 110];
+
       const minVal = Math.min(...values);
       const maxVal = Math.max(...values);
       const rawSpan = maxVal - minVal;
@@ -395,6 +733,7 @@
 
       const padding = Math.max(rawSpan * 0.22, 0.75);
       const step = rawSpan <= 5 ? 1 : 5;
+
       return [
         Math.floor((minVal - padding) / step) * step,
         Math.ceil((maxVal + padding) / step) * step
@@ -407,7 +746,11 @@
         paper_bgcolor: "rgba(0,0,0,0)",
         plot_bgcolor: "rgba(0,0,0,0)",
         font: { family: "Inter, Arial", color: "#334155", size: 11 },
-        hoverlabel: { bgcolor: "#0f172a", bordercolor: "#0f172a", font: { color: "#fff" } },
+        hoverlabel: {
+          bgcolor: "#0f172a",
+          bordercolor: "#0f172a",
+          font: { color: "#fff" }
+        },
         ...extra
       };
     }
@@ -417,7 +760,13 @@
         btn.classList.toggle("active", btn.dataset.range === selectedEquityRange);
       });
 
-      const labelMap = {"all":"ALL | Indexed to 100","1y":"Ultimo anno | Indexed to 100","6m":"Ultimi 6 mesi | Indexed to 100","1m":"Ultimo mese | Indexed to 100"};
+      const labelMap = {
+        all: "ALL | Indexed to 100",
+        "1y": "Ultimo anno | Indexed to 100",
+        "6m": "Ultimi 6 mesi | Indexed to 100",
+        "1m": "Ultimo mese | Indexed to 100"
+      };
+
       document.getElementById("equityRangeLabel").textContent = labelMap[selectedEquityRange];
 
       const visible = getVisibleEquityCurve(selectedEquityRange);
@@ -425,15 +774,39 @@
       const y = visible.map(r => r.value);
       const yRange = getSmartYAxisRange(y);
 
-      const baseline = {x, y: y.map(() => yRange[0]), type:"scatter", mode:"lines", line:{width:0, color:"rgba(0,0,0,0)"}, hoverinfo:"skip", showlegend:false};
-      const trace = {x, y, type:"scatter", mode:"lines", fill:"tonexty", line:{width:4, color:"#2563eb", shape:"spline", smoothing:0.65}, fillcolor:"rgba(37,99,235,0.12)", hovertemplate:"%{x}<br>Index: %{y:.2f}<extra></extra>"};
-      const marker = {x, y, type:"scatter", mode:"markers", marker:{size:6, color:"#ffffff", line:{color:"#2563eb", width:2}}, hovertemplate:"%{x}<br>Index: %{y:.2f}<extra></extra>"};
+      const trace = {
+        x,
+        y,
+        type: "scatter",
+        mode: "lines",
+        line: {
+          width: 3,
+          color: "#047857",
+          shape: "spline",
+          smoothing: 0.55
+        },
+        hovertemplate: "%{x}<br>Index: %{y:.2f}<extra></extra>"
+      };
 
-      Plotly.newPlot("equityCurve", [baseline, trace, marker], baseLayout({
-        xaxis: {showgrid:false, zeroline:false, color:"#475569"},
-        yaxis: {range:yRange, showgrid:true, gridcolor:"rgba(148,163,184,0.20)", zeroline:false, color:"#475569", tickformat:".1f"},
-        showlegend:false
-      }), {displayModeBar:false, responsive:true});
+      Plotly.newPlot("equityCurve", [trace], baseLayout({
+        xaxis: {
+          showgrid: false,
+          zeroline: false,
+          color: "#475569"
+        },
+        yaxis: {
+          range: yRange,
+          showgrid: true,
+          gridcolor: "rgba(148,163,184,0.20)",
+          zeroline: false,
+          color: "#475569",
+          tickformat: ".1f"
+        },
+        showlegend: false
+      }), {
+        displayModeBar: false,
+        responsive: true
+      });
     }
 
     function renderHorizontalBar(divId, obj, leftMargin = 140) {
@@ -442,51 +815,100 @@
       const values = entries.map(x => x[1]);
 
       const trace = {
-        x: values, y: labels, type:"bar", orientation:"h",
-        marker: {color: values.map((_, i) => palette[i % palette.length]), opacity:0.92},
-        text: values.map(v => `${v.toFixed(1)}%`), textposition:"auto",
-        hovertemplate:"%{y}<br>%{x:.2f}%<extra></extra>"
+        x: values,
+        y: labels,
+        type: "bar",
+        orientation: "h",
+        marker: {
+          color: values.map((_, i) => palette[i % palette.length]),
+          opacity: 0.92
+        },
+        text: values.map(v => `${v.toFixed(1)}%`),
+        textposition: "auto",
+        hovertemplate: "%{y}<br>%{x:.2f}%<extra></extra>"
       };
 
       Plotly.newPlot(divId, [trace], baseLayout({
-        margin:{l:leftMargin, r:20, t:8, b:35},
-        xaxis:{showgrid:true, gridcolor:"rgba(148,163,184,0.20)", ticksuffix:"%", zeroline:false, color:"#475569"},
-        yaxis:{showgrid:false, zeroline:false, color:"#334155"},
-        bargap:0.38,
-        showlegend:false
-      }), {displayModeBar:false, responsive:true});
+        margin: { l: leftMargin, r: 20, t: 8, b: 35 },
+        xaxis: {
+          showgrid: true,
+          gridcolor: "rgba(148,163,184,0.20)",
+          ticksuffix: "%",
+          zeroline: false,
+          color: "#475569"
+        },
+        yaxis: {
+          showgrid: false,
+          zeroline: false,
+          color: "#334155"
+        },
+        bargap: 0.38,
+        showlegend: false
+      }), {
+        displayModeBar: false,
+        responsive: true
+      });
     }
 
     function renderContributionChart() {
+      const key = selectedContributionRange === "6m"
+        ? "contribution_6m"
+        : "contribution_1m";
+
+      document.querySelectorAll("#contributionRangeControls .range-btn").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.range === selectedContributionRange);
+      });
+
+      document.getElementById("contributionRangeLabel").textContent =
+        selectedContributionRange === "6m" ? "Ultimi 6 mesi" : "Ultimo mese";
+
       const rows = [...portfolio.holdings]
-        .filter(h => h.last_update_contribution !== null && h.last_update_contribution !== undefined)
-        .sort((a,b) => Math.abs(b.last_update_contribution) - Math.abs(a.last_update_contribution))
+        .filter(h => h[key] !== null && h[key] !== undefined)
+        .sort((a,b) => Math.abs(b[key]) - Math.abs(a[key]))
         .slice(0, 10)
-        .sort((a,b) => a.last_update_contribution - b.last_update_contribution);
+        .sort((a,b) => a[key] - b[key]);
 
       const trace = {
-        x: rows.map(h => h.last_update_contribution),
+        x: rows.map(h => h[key]),
         y: rows.map(h => h.name),
-        type:"bar", orientation:"h",
-        marker:{color: rows.map(h => h.last_update_contribution >= 0 ? "#047857" : "#b91c1c"), opacity:0.9},
-        text: rows.map(h => fmtPct(h.last_update_contribution, 3)),
-        textposition:"auto",
-        hovertemplate:"%{y}<br>Contribution: %{x:.3f}%<extra></extra>"
+        type: "bar",
+        orientation: "h",
+        marker: {
+          color: rows.map(h => h[key] >= 0 ? "#047857" : "#b91c1c"),
+          opacity: 0.9
+        },
+        text: rows.map(h => fmtPct(h[key], 3)),
+        textposition: "auto",
+        hovertemplate: "%{y}<br>Contribution: %{x:.3f}%<extra></extra>"
       };
 
-      Plotly.newPlot("dailyContribution", [trace], baseLayout({
-        margin:{l:165, r:25, t:8, b:42},
-        xaxis:{showgrid:true, gridcolor:"rgba(148,163,184,0.20)", ticksuffix:"%", zeroline:true, zerolinecolor:"rgba(148,163,184,0.75)", color:"#475569"},
-        yaxis:{showgrid:false, zeroline:false, color:"#334155"},
-        bargap:0.40,
-        showlegend:false
-      }), {displayModeBar:false, responsive:true});
+      Plotly.newPlot("contributionChart", [trace], baseLayout({
+        margin: { l: 165, r: 25, t: 8, b: 42 },
+        xaxis: {
+          showgrid: true,
+          gridcolor: "rgba(148,163,184,0.20)",
+          ticksuffix: "%",
+          zeroline: true,
+          zerolinecolor: "rgba(148,163,184,0.75)",
+          color: "#475569"
+        },
+        yaxis: {
+          showgrid: false,
+          zeroline: false,
+          color: "#334155"
+        },
+        bargap: 0.40,
+        showlegend: false
+      }), {
+        displayModeBar: false,
+        responsive: true
+      });
     }
 
     function renderKpis() {
       const items = [
         ["Portfolio value", fmtEur(portfolio.total_value_eur), "Controvalore corrente"],
-        ["Da ultimo aggiornamento", fmtPct(portfolio.last_update_return), "Rendimento vs snapshot precedente", portfolio.last_update_return],
+        ["Rendimento 12 mesi", fmtPct(portfolio.return_12m), "Performance trailing 12M", portfolio.return_12m],
         ["Latest price date", data.last_price_date || "—", "Ultimo close disponibile"],
         ["Data status", portfolio.data_status.ok ? "OK" : "Warning", `${portfolio.data_status.missing_or_error} strumenti con errore`],
       ];
@@ -502,6 +924,7 @@
 
     function renderCounts() {
       const c = portfolio.counts;
+
       const items = [
         ["Totale strumenti", c.total_instruments],
         ["ETF azionari", c.equity_etfs],
@@ -512,7 +935,10 @@
       ];
 
       document.getElementById("instrumentCounts").innerHTML = items.map(([label, value]) => `
-        <div class="count-box"><span>${label}</span><strong>${value}</strong></div>
+        <div class="count-box">
+          <span>${label}</span>
+          <strong>${value}</strong>
+        </div>
       `).join("");
     }
 
@@ -523,6 +949,7 @@
       document.getElementById("pacExposure").textContent = fmtEur(pacValue);
       document.getElementById("picExposure").textContent = fmtEur(picValue);
       document.getElementById("programCount").textContent = portfolio.counts.total_instruments;
+
       document.getElementById("dataQualityLabel").textContent = portfolio.data_status.ok ? "OK" : "Warning";
       document.getElementById("dataSource").textContent = portfolio.data_status.source;
       document.getElementById("missingCount").textContent = portfolio.data_status.missing_or_error;
@@ -541,18 +968,18 @@
       return rows
         .sort((a,b) => (b.weight || 0) - (a.weight || 0))
         .map(r => `
-        <tr>
-          <td><strong>${r.name}</strong></td>
-          <td>${r.isin}</td>
-          <td><span class="pill">${r.ticker}</span></td>
-          <td>${isPac ? (r.frequency || "—") : (r.purchase_date || "—")}</td>
-          <td class="num">${fmtPct(r.weight)}</td>
-          <td class="num">${badgePct(r.last_update_return)}</td>
-          <td class="num">${badgePct(r.last_update_contribution, 3)}</td>
-          <td class="num">${badgePct(r.purchase_return)}</td>
-          <td class="num">${badgePct(r.purchase_contribution, 3)}</td>
-        </tr>
-      `).join("");
+          <tr>
+            <td><strong>${r.name}</strong></td>
+            <td>${r.isin}</td>
+            <td><span class="pill">${r.ticker}</span></td>
+            <td>${isPac ? (r.frequency || "—") : (r.purchase_date || "—")}</td>
+            <td class="num">${fmtPct(r.weight)}</td>
+            <td class="num">${badgePct(r.return_12m)}</td>
+            <td class="num">${badgePct(r.contribution_6m, 3)}</td>
+            <td class="num">${badgePct(r.contribution_1m, 3)}</td>
+            <td class="num">${badgePct(r.purchase_return)}</td>
+          </tr>
+        `).join("");
     }
 
     function renderTables() {
@@ -572,10 +999,10 @@
             <td>${h.currency}</td>
             <td class="num">${fmtPct(h.weight)}</td>
             <td class="num">${fmtNum(h.price)}</td>
-            <td class="num">${badgePct(h.last_update_return)}</td>
-            <td class="num">${badgePct(h.last_update_contribution, 3)}</td>
+            <td class="num">${badgePct(h.return_12m)}</td>
+            <td class="num">${badgePct(h.contribution_6m, 3)}</td>
+            <td class="num">${badgePct(h.contribution_1m, 3)}</td>
             <td class="num">${badgePct(h.purchase_return)}</td>
-            <td class="num">${badgePct(h.purchase_contribution, 3)}</td>
           </tr>
         `).join("");
     }
@@ -584,6 +1011,13 @@
       btn.addEventListener("click", () => {
         selectedEquityRange = btn.dataset.range;
         renderEquityCurve();
+      });
+    });
+
+    document.querySelectorAll("#contributionRangeControls .range-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        selectedContributionRange = btn.dataset.range;
+        renderContributionChart();
       });
     });
 
