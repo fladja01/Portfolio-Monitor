@@ -135,18 +135,40 @@ def aggregate_weights(rows: list[dict], key: str, total_value: float) -> dict:
 def compute_equity_curve(value_matrix: pd.DataFrame) -> list[dict]:
     """
     Portfolio equity curve indexed to 100 from the start date.
-    The front-end will rebase each selected period to 100.
+
+    Important:
+    instruments have different calendars:
+    - stocks/ETF trade on business days;
+    - crypto trades every day;
+    - FX can have a different calendar.
+
+    To avoid artificial weekend/holiday drops, all series are reindexed
+    to a common daily calendar and forward-filled before summing.
     """
     if value_matrix.empty:
         return []
 
-    daily_total = value_matrix.sum(axis=1).dropna()
+    value_matrix = value_matrix.sort_index()
+
+    start = value_matrix.index.min()
+    end = value_matrix.index.max()
+
+    daily_index = pd.date_range(start=start, end=end, freq="D")
+
+    aligned = value_matrix.reindex(daily_index).ffill()
+
+    # Drop dates where no instrument has any value yet.
+    aligned = aligned.dropna(how="all")
+
+    if aligned.empty:
+        return []
+
+    daily_total = aligned.sum(axis=1, min_count=1).dropna()
 
     if daily_total.empty:
         return []
 
     indexed = daily_total / daily_total.iloc[0] * 100
-    indexed = indexed.dropna()
 
     return [
         {
