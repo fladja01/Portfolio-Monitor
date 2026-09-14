@@ -11,13 +11,13 @@
     ],
     "notes": "Demo. Replace CSV files with real portfolio holdings."
   },
-  "generated_at": "2026-09-14T16:54:19",
+  "generated_at": "2026-09-14T20:26:33",
   "last_price_date": "2026-09-14",
   "portfolio": {
     "name": "Fladjellux Fund",
     "base_currency": "EUR",
-    "total_value_eur": 310619.21529254696,
-    "return_12m": 426.21873319442346,
+    "total_value_eur": 310070.20138111885,
+    "return_12m": 425.2886509884475,
     "counts": {
       "total_instruments": 10,
       "equity_etfs": 2,
@@ -41,19 +41,19 @@
         "purchase_date": "2025-01-15",
         "quantity": 145.0,
         "purchase_amount_eur": 25000.0,
-        "price": 335.2200012207031,
+        "price": 333.0799865722656,
         "latest_date": "2026-09-14",
-        "fx_to_eur": 0.8646000293332539,
-        "current_value_eur": 42025.52731883443,
-        "return_12m": 44.11736522267184,
-        "return_6m": 31.325251458862358,
-        "return_1m": 9.283379496990296,
-        "purchase_return": 68.10210927533771,
+        "fx_to_eur": 0.8657999936421776,
+        "current_value_eur": 41815.19428720761,
+        "return_12m": 43.39607403916374,
+        "return_6m": 30.66798336418892,
+        "return_1m": 8.736428489293502,
+        "purchase_return": 67.26077714883046,
         "data_status": "OK",
-        "weight": 13.52959676987594,
-        "contribution_6m": 4.238180209533757,
-        "contribution_1m": 1.2560038125601245,
-        "purchase_contribution": 9.213940776733473
+        "weight": 13.485718427941096,
+        "contribution_6m": 4.135797884022335,
+        "contribution_1m": 1.1781701467245496,
+        "purchase_contribution": 9.070599018736223
       },
       {
         "instrument_id": "MSFT",
@@ -69,19 +69,19 @@
         "purchase_date": "2025-02-03",
         "quantity": 70.0,
         "purchase_amount_eur": 24000.0,
-        "price": 508.0249938964844,
+        "price": 505.4100036621094,
         "latest_date": "2026-09-14",
-        "fx_to_eur": 0.8646000293332539,
-        "current_value_eur": 30746.689723744854,
-        "return_12m": 0.7665405121311641,
-        "return_6m": 26.093071030543904,
-        "return_1m": 2.4689133814441044,
-        "purchase_return": 28.111207182270228,
+        "fx_to_eur": 0.8657999936421776,
+        "current_value_eur": 30630.878457014307,
+        "return_12m": 0.38699068723562213,
+        "return_6m": 25.618125649002078,
+        "return_1m": 2.082951355423357,
+        "purchase_return": 27.62866023755961,
         "data_status": "OK",
-        "weight": 9.898515033845234,
-        "contribution_6m": 2.582826558750304,
-        "contribution_1m": 0.24438576223486141,
-        "purchase_contribution": 2.7825920691324
+        "weight": 9.878691444897909,
+        "contribution_6m": 2.530735586831165,
+        "contribution_1m": 0.20576833734959218,
+        "purchase_contribution": 2.729350095227711
       },
       {
         "instrument_id": "NVDA",
@@ -97,19 +97,19 @@
         "purchase_date": "2025-03-12",
         "quantity": 180.0,
         "purchase_amount_eur": 18000.0,
-        "price": 212.18499755859375,
+        "price": 210.9600067138672,
         "latest_date": "2026-09-14",
-        "fx_to_eur": 0.8646000293332539,
-        "current_value_eur": 33021.92792038258,
-        "return_12m": 21.318669609784635,
-        "return_6m": 14.759539550170286,
-        "return_1m": -5.9074230770276515,
-        "purchase_return": 83.45515511323656,
+        "fx_to_eur": 0.8657999936421776,
+        "current_value_eur": 32876.85104489159,
+        "return_12m": 20.785663881465656,
+        "return_6m": 14.25535123010766,
+        "return_1m": -6.320804666975777,
+        "purchase_return": 82.64917247161996,
         "data_status": "OK",
-        "weight": 10.630999723980988,
-        "contribution_6m": 1.569086608839468,
-        "contribution_1m": -0.6280181310131988,
-        "purchase_contribution": 8.872117309736083
+        "weight": 10.603034699384551,
+        "contribution_6m": 1.5114998374474578,
+        "contribution_1m": -0.6701971121197597,
+        "purchase_contribution": 8.763320435920049
       },
       {
         "instrument_id": "BABA",
@@ -125,19 +125,19 @@
         "purchase_date": "2025-04-18",
         "quantity": 210.0,
         "purchase_amount_eur": 16500.0,
-        "price": 110.2699966430664,
+        "price": 109.2300033569336,
         "latest_date": "2026-09-14",
-        "fx_to_eur": 0.8646000293332539,
-        "current_value_eur": 20021.282889756334,
-        "return_12m": -28.60890960789587,
-        "return_6m": -19.52095417722557,
-        "return_1m": -11.172406582845563,
-        "purchase_return": 21.341108422765664,
+        "fx_to_eur": 0.8657999936421776,
+        "current_value_eur": 19859.980604513312,
+        "return_12m": -29.18407485028548,
+        "return_6m": -20.16933690458982,
+        "return_1m": -11.888049725681116,
+        "purchase_return": 20.363518815232197,
         "data_status": "OK",
-        "weight": 6.445603460462006,
-        "contribution_6m": -1.2582432979624538,
-        "contribution_1m": -0.7201290253207785,
-        "purchase_contribution": 1.3755632229987322
+        "weight": 6.404994906331766,
+        "contribution_6m": -1.291845001379871,
+        "contribution_1m": -0.761428979392063,
+        "purchase_contribution": 1.3042823428655332
       },
       {
         "instrument_id": "SPY",
@@ -153,19 +153,19 @@
         "purchase_date": "2025-01-01",
         "quantity": 85.0,
         "purchase_amount_eur": 41000.0,
-        "price": 763.2100219726562,
+        "price": 760.8800048828125,
         "latest_date": "2026-09-14",
-        "fx_to_eur": 0.8646000293332539,
-        "current_value_eur": 56089.06962772431,
-        "return_12m": 18.37793654984672,
-        "return_6m": 13.385035302317917,
-        "return_1m": -1.9520910343840514,
-        "purchase_return": 36.802608848108086,
+        "fx_to_eur": 0.8657999936421776,
+        "current_value_eur": 55995.44178814993,
+        "return_12m": 18.180331730832975,
+        "return_6m": 13.195764986980517,
+        "return_1m": -2.1157595343639257,
+        "purchase_return": 36.574248263780326,
         "data_status": "OK",
-        "weight": 18.057179616173645,
-        "contribution_6m": 2.4169598662277973,
-        "contribution_1m": -0.35249258434995023,
-        "purchase_contribution": 6.645513183140692
+        "weight": 18.058956177902385,
+        "contribution_6m": 2.383017416337798,
+        "contribution_1m": -0.3820840871405729,
+        "purchase_contribution": 6.604927466353313
       },
       {
         "instrument_id": "QQQ",
@@ -181,19 +181,19 @@
         "purchase_date": "2025-01-01",
         "quantity": 60.0,
         "purchase_amount_eur": 23000.0,
-        "price": 711.989990234375,
+        "price": 709.1799926757812,
         "latest_date": "2026-09-14",
-        "fx_to_eur": 0.8646000293332539,
-        "current_value_eur": 36935.19398649743,
-        "return_12m": 22.590557583232496,
-        "return_6m": 17.52421778683233,
-        "return_1m": -2.8682595491574814,
-        "purchase_return": 60.587799941293156,
+        "fx_to_eur": 0.8657999936421776,
+        "current_value_eur": 36840.481988991065,
+        "return_12m": 22.276188997170788,
+        "return_6m": 17.22285336389109,
+        "return_1m": -3.1173320506510893,
+        "purchase_return": 60.17600864778725,
         "data_status": "OK",
-        "weight": 11.890827150442439,
-        "contribution_6m": 2.083774446499322,
-        "contribution_1m": -0.3410597852163757,
-        "purchase_contribution": 7.204390565275035
+        "weight": 11.881335847461541,
+        "contribution_6m": 2.046305050679728,
+        "contribution_1m": -0.3703806904184158,
+        "purchase_contribution": 7.149713687041103
       },
       {
         "instrument_id": "AGG",
@@ -209,19 +209,19 @@
         "purchase_date": "2025-01-10",
         "quantity": 250.0,
         "purchase_amount_eur": 22000.0,
-        "price": 96.15499877929688,
+        "price": 95.88999938964844,
         "latest_date": "2026-09-14",
-        "fx_to_eur": 0.8646000293332539,
-        "current_value_eur": 20783.903691279767,
-        "return_12m": 0.7347107394880092,
-        "return_6m": -2.5869648655356348,
-        "return_1m": -1.2794258502466849,
-        "purchase_return": -5.52771049418288,
+        "fx_to_eur": 0.8657999936421776,
+        "current_value_eur": 20755.39021547651,
+        "return_12m": 0.5965046736188473,
+        "return_6m": -2.7206059880834577,
+        "return_1m": -1.4148607879809205,
+        "purchase_return": -5.657317202379508,
         "data_status": "OK",
-        "weight": 6.6911197595116905,
-        "contribution_6m": -0.1730969172894799,
-        "contribution_1m": -0.08560791587415638,
-        "purchase_contribution": -0.36986572912487203
+        "weight": 6.693771321148427,
+        "contribution_6m": -0.18211114339177728,
+        "contribution_1m": -0.09470754566004151,
+        "purchase_contribution": -0.378687876439276
       },
       {
         "instrument_id": "GLD",
@@ -237,19 +237,19 @@
         "purchase_date": "2025-02-20",
         "quantity": 95.0,
         "purchase_amount_eur": 17000.0,
-        "price": 395.6122131347656,
+        "price": 392.8399963378906,
         "latest_date": "2026-09-14",
-        "fx_to_eur": 0.8646000293332539,
-        "current_value_eur": 32494.401452686623,
-        "return_12m": 18.35010280060283,
-        "return_6m": -15.050364944811212,
-        "return_1m": -1.7229723808163233,
-        "purchase_return": 91.14353795698014,
+        "fx_to_eur": 0.8657999936421776,
+        "current_value_eur": 32311.482301515185,
+        "return_12m": 17.683880332192082,
+        "return_6m": -15.528567787206814,
+        "return_1m": -2.2761984649443234,
+        "purchase_return": 90.06754295008932,
         "data_status": "OK",
-        "weight": 10.461169126991319,
-        "contribution_6m": -1.5744441311061146,
-        "contribution_1m": -0.1802430547685445,
-        "purchase_contribution": 9.53467965400322
+        "weight": 10.420698976423063,
+        "contribution_6m": -1.6181853044546222,
+        "contribution_1m": -0.2371957901378106,
+        "purchase_contribution": 9.38566752628936
       },
       {
         "instrument_id": "BTC_EUR",
@@ -265,19 +265,19 @@
         "purchase_date": "2025-03-01",
         "quantity": 0.42,
         "purchase_amount_eur": 21000.0,
-        "price": 68180.9609375,
+        "price": 68710.6328125,
         "latest_date": "2026-09-14",
         "fx_to_eur": 1.0,
-        "current_value_eur": 28636.00359375,
-        "return_12m": -30.727163866528418,
-        "return_6m": 9.751662419900352,
-        "return_1m": 25.235033727947155,
-        "purchase_return": 36.361921875,
+        "current_value_eur": 28858.465781249997,
+        "return_12m": -30.18900962967309,
+        "return_6m": 10.604281215807386,
+        "return_1m": 26.20793692875678,
+        "purchase_return": 37.42126562499999,
         "data_status": "OK",
-        "weight": 9.219005838637536,
-        "contribution_6m": 0.8990063278548358,
-        "contribution_1m": 2.3264192327615993,
-        "purchase_contribution": 3.352207700697069
+        "weight": 9.307074866500628,
+        "contribution_6m": 0.9869483918094565,
+        "contribution_1m": 2.4391923109246587,
+        "purchase_contribution": 3.482825207710813
       },
       {
         "instrument_id": "ETH_EUR",
@@ -293,19 +293,19 @@
         "purchase_date": "2025-01-01",
         "quantity": 4.5,
         "purchase_amount_eur": 10500.0,
-        "price": 2192.27001953125,
+        "price": 2250.22998046875,
         "latest_date": "2026-09-14",
         "fx_to_eur": 1.0,
-        "current_value_eur": 9865.215087890625,
-        "return_12m": -44.234511285671175,
-        "return_6m": 19.838095474504524,
-        "return_1m": 34.840723963758414,
-        "purchase_return": -6.045570591517857,
+        "current_value_eur": 10126.034912109375,
+        "return_12m": -42.76016482344378,
+        "return_6m": 23.006414737481016,
+        "return_1m": 38.405687688160725,
+        "purchase_return": -3.5615722656250015,
         "data_status": "OK",
-        "weight": 3.1759835200792006,
-        "contribution_6m": 0.6300546429678414,
-        "contribution_1m": 1.1065356513652522,
-        "purchase_contribution": -0.19200632568136178
+        "weight": 3.26572333200864,
+        "contribution_6m": 0.7513258539405919,
+        "contribution_1m": 1.2542235036506346,
+        "purchase_contribution": -0.11631109646486441
       }
     ],
     "pac": [
@@ -323,19 +323,19 @@
         "purchase_date": "2025-01-01",
         "quantity": 85.0,
         "purchase_amount_eur": 41000.0,
-        "price": 763.2100219726562,
+        "price": 760.8800048828125,
         "latest_date": "2026-09-14",
-        "fx_to_eur": 0.8646000293332539,
-        "current_value_eur": 56089.06962772431,
-        "return_12m": 18.37793654984672,
-        "return_6m": 13.385035302317917,
-        "return_1m": -1.9520910343840514,
-        "purchase_return": 36.802608848108086,
+        "fx_to_eur": 0.8657999936421776,
+        "current_value_eur": 55995.44178814993,
+        "return_12m": 18.180331730832975,
+        "return_6m": 13.195764986980517,
+        "return_1m": -2.1157595343639257,
+        "purchase_return": 36.574248263780326,
         "data_status": "OK",
-        "weight": 18.057179616173645,
-        "contribution_6m": 2.4169598662277973,
-        "contribution_1m": -0.35249258434995023,
-        "purchase_contribution": 6.645513183140692
+        "weight": 18.058956177902385,
+        "contribution_6m": 2.383017416337798,
+        "contribution_1m": -0.3820840871405729,
+        "purchase_contribution": 6.604927466353313
       },
       {
         "instrument_id": "QQQ",
@@ -351,19 +351,19 @@
         "purchase_date": "2025-01-01",
         "quantity": 60.0,
         "purchase_amount_eur": 23000.0,
-        "price": 711.989990234375,
+        "price": 709.1799926757812,
         "latest_date": "2026-09-14",
-        "fx_to_eur": 0.8646000293332539,
-        "current_value_eur": 36935.19398649743,
-        "return_12m": 22.590557583232496,
-        "return_6m": 17.52421778683233,
-        "return_1m": -2.8682595491574814,
-        "purchase_return": 60.587799941293156,
+        "fx_to_eur": 0.8657999936421776,
+        "current_value_eur": 36840.481988991065,
+        "return_12m": 22.276188997170788,
+        "return_6m": 17.22285336389109,
+        "return_1m": -3.1173320506510893,
+        "purchase_return": 60.17600864778725,
         "data_status": "OK",
-        "weight": 11.890827150442439,
-        "contribution_6m": 2.083774446499322,
-        "contribution_1m": -0.3410597852163757,
-        "purchase_contribution": 7.204390565275035
+        "weight": 11.881335847461541,
+        "contribution_6m": 2.046305050679728,
+        "contribution_1m": -0.3703806904184158,
+        "purchase_contribution": 7.149713687041103
       },
       {
         "instrument_id": "ETH_EUR",
@@ -379,19 +379,19 @@
         "purchase_date": "2025-01-01",
         "quantity": 4.5,
         "purchase_amount_eur": 10500.0,
-        "price": 2192.27001953125,
+        "price": 2250.22998046875,
         "latest_date": "2026-09-14",
         "fx_to_eur": 1.0,
-        "current_value_eur": 9865.215087890625,
-        "return_12m": -44.234511285671175,
-        "return_6m": 19.838095474504524,
-        "return_1m": 34.840723963758414,
-        "purchase_return": -6.045570591517857,
+        "current_value_eur": 10126.034912109375,
+        "return_12m": -42.76016482344378,
+        "return_6m": 23.006414737481016,
+        "return_1m": 38.405687688160725,
+        "purchase_return": -3.5615722656250015,
         "data_status": "OK",
-        "weight": 3.1759835200792006,
-        "contribution_6m": 0.6300546429678414,
-        "contribution_1m": 1.1065356513652522,
-        "purchase_contribution": -0.19200632568136178
+        "weight": 3.26572333200864,
+        "contribution_6m": 0.7513258539405919,
+        "contribution_1m": 1.2542235036506346,
+        "purchase_contribution": -0.11631109646486441
       }
     ],
     "pic": [
@@ -409,19 +409,19 @@
         "purchase_date": "2025-01-15",
         "quantity": 145.0,
         "purchase_amount_eur": 25000.0,
-        "price": 335.2200012207031,
+        "price": 333.0799865722656,
         "latest_date": "2026-09-14",
-        "fx_to_eur": 0.8646000293332539,
-        "current_value_eur": 42025.52731883443,
-        "return_12m": 44.11736522267184,
-        "return_6m": 31.325251458862358,
-        "return_1m": 9.283379496990296,
-        "purchase_return": 68.10210927533771,
+        "fx_to_eur": 0.8657999936421776,
+        "current_value_eur": 41815.19428720761,
+        "return_12m": 43.39607403916374,
+        "return_6m": 30.66798336418892,
+        "return_1m": 8.736428489293502,
+        "purchase_return": 67.26077714883046,
         "data_status": "OK",
-        "weight": 13.52959676987594,
-        "contribution_6m": 4.238180209533757,
-        "contribution_1m": 1.2560038125601245,
-        "purchase_contribution": 9.213940776733473
+        "weight": 13.485718427941096,
+        "contribution_6m": 4.135797884022335,
+        "contribution_1m": 1.1781701467245496,
+        "purchase_contribution": 9.070599018736223
       },
       {
         "instrument_id": "MSFT",
@@ -437,19 +437,19 @@
         "purchase_date": "2025-02-03",
         "quantity": 70.0,
         "purchase_amount_eur": 24000.0,
-        "price": 508.0249938964844,
+        "price": 505.4100036621094,
         "latest_date": "2026-09-14",
-        "fx_to_eur": 0.8646000293332539,
-        "current_value_eur": 30746.689723744854,
-        "return_12m": 0.7665405121311641,
-        "return_6m": 26.093071030543904,
-        "return_1m": 2.4689133814441044,
-        "purchase_return": 28.111207182270228,
+        "fx_to_eur": 0.8657999936421776,
+        "current_value_eur": 30630.878457014307,
+        "return_12m": 0.38699068723562213,
+        "return_6m": 25.618125649002078,
+        "return_1m": 2.082951355423357,
+        "purchase_return": 27.62866023755961,
         "data_status": "OK",
-        "weight": 9.898515033845234,
-        "contribution_6m": 2.582826558750304,
-        "contribution_1m": 0.24438576223486141,
-        "purchase_contribution": 2.7825920691324
+        "weight": 9.878691444897909,
+        "contribution_6m": 2.530735586831165,
+        "contribution_1m": 0.20576833734959218,
+        "purchase_contribution": 2.729350095227711
       },
       {
         "instrument_id": "NVDA",
@@ -465,19 +465,19 @@
         "purchase_date": "2025-03-12",
         "quantity": 180.0,
         "purchase_amount_eur": 18000.0,
-        "price": 212.18499755859375,
+        "price": 210.9600067138672,
         "latest_date": "2026-09-14",
-        "fx_to_eur": 0.8646000293332539,
-        "current_value_eur": 33021.92792038258,
-        "return_12m": 21.318669609784635,
-        "return_6m": 14.759539550170286,
-        "return_1m": -5.9074230770276515,
-        "purchase_return": 83.45515511323656,
+        "fx_to_eur": 0.8657999936421776,
+        "current_value_eur": 32876.85104489159,
+        "return_12m": 20.785663881465656,
+        "return_6m": 14.25535123010766,
+        "return_1m": -6.320804666975777,
+        "purchase_return": 82.64917247161996,
         "data_status": "OK",
-        "weight": 10.630999723980988,
-        "contribution_6m": 1.569086608839468,
-        "contribution_1m": -0.6280181310131988,
-        "purchase_contribution": 8.872117309736083
+        "weight": 10.603034699384551,
+        "contribution_6m": 1.5114998374474578,
+        "contribution_1m": -0.6701971121197597,
+        "purchase_contribution": 8.763320435920049
       },
       {
         "instrument_id": "BABA",
@@ -493,19 +493,19 @@
         "purchase_date": "2025-04-18",
         "quantity": 210.0,
         "purchase_amount_eur": 16500.0,
-        "price": 110.2699966430664,
+        "price": 109.2300033569336,
         "latest_date": "2026-09-14",
-        "fx_to_eur": 0.8646000293332539,
-        "current_value_eur": 20021.282889756334,
-        "return_12m": -28.60890960789587,
-        "return_6m": -19.52095417722557,
-        "return_1m": -11.172406582845563,
-        "purchase_return": 21.341108422765664,
+        "fx_to_eur": 0.8657999936421776,
+        "current_value_eur": 19859.980604513312,
+        "return_12m": -29.18407485028548,
+        "return_6m": -20.16933690458982,
+        "return_1m": -11.888049725681116,
+        "purchase_return": 20.363518815232197,
         "data_status": "OK",
-        "weight": 6.445603460462006,
-        "contribution_6m": -1.2582432979624538,
-        "contribution_1m": -0.7201290253207785,
-        "purchase_contribution": 1.3755632229987322
+        "weight": 6.404994906331766,
+        "contribution_6m": -1.291845001379871,
+        "contribution_1m": -0.761428979392063,
+        "purchase_contribution": 1.3042823428655332
       },
       {
         "instrument_id": "AGG",
@@ -521,19 +521,19 @@
         "purchase_date": "2025-01-10",
         "quantity": 250.0,
         "purchase_amount_eur": 22000.0,
-        "price": 96.15499877929688,
+        "price": 95.88999938964844,
         "latest_date": "2026-09-14",
-        "fx_to_eur": 0.8646000293332539,
-        "current_value_eur": 20783.903691279767,
-        "return_12m": 0.7347107394880092,
-        "return_6m": -2.5869648655356348,
-        "return_1m": -1.2794258502466849,
-        "purchase_return": -5.52771049418288,
+        "fx_to_eur": 0.8657999936421776,
+        "current_value_eur": 20755.39021547651,
+        "return_12m": 0.5965046736188473,
+        "return_6m": -2.7206059880834577,
+        "return_1m": -1.4148607879809205,
+        "purchase_return": -5.657317202379508,
         "data_status": "OK",
-        "weight": 6.6911197595116905,
-        "contribution_6m": -0.1730969172894799,
-        "contribution_1m": -0.08560791587415638,
-        "purchase_contribution": -0.36986572912487203
+        "weight": 6.693771321148427,
+        "contribution_6m": -0.18211114339177728,
+        "contribution_1m": -0.09470754566004151,
+        "purchase_contribution": -0.378687876439276
       },
       {
         "instrument_id": "GLD",
@@ -549,19 +549,19 @@
         "purchase_date": "2025-02-20",
         "quantity": 95.0,
         "purchase_amount_eur": 17000.0,
-        "price": 395.6122131347656,
+        "price": 392.8399963378906,
         "latest_date": "2026-09-14",
-        "fx_to_eur": 0.8646000293332539,
-        "current_value_eur": 32494.401452686623,
-        "return_12m": 18.35010280060283,
-        "return_6m": -15.050364944811212,
-        "return_1m": -1.7229723808163233,
-        "purchase_return": 91.14353795698014,
+        "fx_to_eur": 0.8657999936421776,
+        "current_value_eur": 32311.482301515185,
+        "return_12m": 17.683880332192082,
+        "return_6m": -15.528567787206814,
+        "return_1m": -2.2761984649443234,
+        "purchase_return": 90.06754295008932,
         "data_status": "OK",
-        "weight": 10.461169126991319,
-        "contribution_6m": -1.5744441311061146,
-        "contribution_1m": -0.1802430547685445,
-        "purchase_contribution": 9.53467965400322
+        "weight": 10.420698976423063,
+        "contribution_6m": -1.6181853044546222,
+        "contribution_1m": -0.2371957901378106,
+        "purchase_contribution": 9.38566752628936
       },
       {
         "instrument_id": "BTC_EUR",
@@ -577,41 +577,41 @@
         "purchase_date": "2025-03-01",
         "quantity": 0.42,
         "purchase_amount_eur": 21000.0,
-        "price": 68180.9609375,
+        "price": 68710.6328125,
         "latest_date": "2026-09-14",
         "fx_to_eur": 1.0,
-        "current_value_eur": 28636.00359375,
-        "return_12m": -30.727163866528418,
-        "return_6m": 9.751662419900352,
-        "return_1m": 25.235033727947155,
-        "purchase_return": 36.361921875,
+        "current_value_eur": 28858.465781249997,
+        "return_12m": -30.18900962967309,
+        "return_6m": 10.604281215807386,
+        "return_1m": 26.20793692875678,
+        "purchase_return": 37.42126562499999,
         "data_status": "OK",
-        "weight": 9.219005838637536,
-        "contribution_6m": 0.8990063278548358,
-        "contribution_1m": 2.3264192327615993,
-        "purchase_contribution": 3.352207700697069
+        "weight": 9.307074866500628,
+        "contribution_6m": 0.9869483918094565,
+        "contribution_1m": 2.4391923109246587,
+        "purchase_contribution": 3.482825207710813
       }
     ],
     "asset_allocation": {
-      "Equity": 40.50471498816417,
-      "ETF Equity": 29.948006766616082,
-      "Crypto": 12.394989358716737,
-      "ETF Commodity": 10.461169126991319,
-      "ETF Bond": 6.6911197595116905
+      "Equity": 40.37243947855533,
+      "ETF Equity": 29.94029202536393,
+      "Crypto": 12.572798198509266,
+      "ETF Commodity": 10.420698976423063,
+      "ETF Bond": 6.693771321148427
     },
     "sector_allocation": {
-      "Information Technology": 23.428111803721176,
-      "Broad Equity": 18.057179616173645,
-      "Crypto": 12.394989358716737,
-      "Technology": 11.890827150442439,
-      "Semiconductors": 10.630999723980988,
-      "Gold": 10.461169126991319,
-      "Aggregate Bonds": 6.6911197595116905,
-      "Consumer Discretionary": 6.445603460462006
+      "Information Technology": 23.364409872839005,
+      "Broad Equity": 18.058956177902385,
+      "Crypto": 12.572798198509266,
+      "Technology": 11.881335847461541,
+      "Semiconductors": 10.603034699384551,
+      "Gold": 10.420698976423063,
+      "Aggregate Bonds": 6.693771321148427,
+      "Consumer Discretionary": 6.404994906331766
     },
     "currency_exposure": {
-      "USD": 87.60501064128327,
-      "EUR": 12.394989358716737
+      "USD": 87.42720180149074,
+      "EUR": 12.572798198509266
     },
     "equity_curve": [
       {
@@ -624,11 +624,11 @@
       },
       {
         "date": "2025-01-03",
-        "value": 535.8705
+        "value": 535.8706
       },
       {
         "date": "2025-01-04",
-        "value": 536.4147
+        "value": 536.4148
       },
       {
         "date": "2025-01-05",
@@ -748,7 +748,7 @@
       },
       {
         "date": "2025-02-03",
-        "value": 527.2559
+        "value": 527.256
       },
       {
         "date": "2025-02-04",
@@ -776,7 +776,7 @@
       },
       {
         "date": "2025-02-10",
-        "value": 534.3674
+        "value": 534.3673
       },
       {
         "date": "2025-02-11",
@@ -792,7 +792,7 @@
       },
       {
         "date": "2025-02-14",
-        "value": 538.9007
+        "value": 538.9008
       },
       {
         "date": "2025-02-15",
@@ -836,7 +836,7 @@
       },
       {
         "date": "2025-02-25",
-        "value": 524.9418
+        "value": 524.9419
       },
       {
         "date": "2025-02-26",
@@ -1008,7 +1008,7 @@
       },
       {
         "date": "2025-04-09",
-        "value": 454.5187
+        "value": 454.5186
       },
       {
         "date": "2025-04-10",
@@ -1100,7 +1100,7 @@
       },
       {
         "date": "2025-05-02",
-        "value": 473.9258
+        "value": 473.9257
       },
       {
         "date": "2025-05-03",
@@ -1108,7 +1108,7 @@
       },
       {
         "date": "2025-05-04",
-        "value": 471.7138
+        "value": 471.7137
       },
       {
         "date": "2025-05-05",
@@ -1116,7 +1116,7 @@
       },
       {
         "date": "2025-05-06",
-        "value": 472.2256
+        "value": 472.2257
       },
       {
         "date": "2025-05-07",
@@ -1184,7 +1184,7 @@
       },
       {
         "date": "2025-05-23",
-        "value": 494.4596
+        "value": 494.4597
       },
       {
         "date": "2025-05-24",
@@ -1228,7 +1228,7 @@
       },
       {
         "date": "2025-06-03",
-        "value": 496.1148
+        "value": 496.1149
       },
       {
         "date": "2025-06-04",
@@ -1256,7 +1256,7 @@
       },
       {
         "date": "2025-06-10",
-        "value": 506.8585
+        "value": 506.8584
       },
       {
         "date": "2025-06-11",
@@ -1272,11 +1272,11 @@
       },
       {
         "date": "2025-06-14",
-        "value": 490.6091
+        "value": 490.609
       },
       {
         "date": "2025-06-15",
-        "value": 490.7625
+        "value": 490.7624
       },
       {
         "date": "2025-06-16",
@@ -1312,7 +1312,7 @@
       },
       {
         "date": "2025-06-24",
-        "value": 497.3362
+        "value": 497.3361
       },
       {
         "date": "2025-06-25",
@@ -1400,7 +1400,7 @@
       },
       {
         "date": "2025-07-16",
-        "value": 526.9519
+        "value": 526.9518
       },
       {
         "date": "2025-07-17",
@@ -1416,7 +1416,7 @@
       },
       {
         "date": "2025-07-20",
-        "value": 532.0871
+        "value": 532.087
       },
       {
         "date": "2025-07-21",
@@ -1464,11 +1464,11 @@
       },
       {
         "date": "2025-08-01",
-        "value": 532.7501
+        "value": 532.7502
       },
       {
         "date": "2025-08-02",
-        "value": 531.5172
+        "value": 531.5173
       },
       {
         "date": "2025-08-03",
@@ -1620,7 +1620,7 @@
       },
       {
         "date": "2025-09-09",
-        "value": 548.6017
+        "value": 548.6018
       },
       {
         "date": "2025-09-10",
@@ -1756,7 +1756,7 @@
       },
       {
         "date": "2025-10-13",
-        "value": 586.2844
+        "value": 586.2843
       },
       {
         "date": "2025-10-14",
@@ -1780,7 +1780,7 @@
       },
       {
         "date": "2025-10-19",
-        "value": 576.8597
+        "value": 576.8596
       },
       {
         "date": "2025-10-20",
@@ -1840,7 +1840,7 @@
       },
       {
         "date": "2025-11-03",
-        "value": 594.4392
+        "value": 594.4393
       },
       {
         "date": "2025-11-04",
@@ -2080,7 +2080,7 @@
       },
       {
         "date": "2026-01-02",
-        "value": 558.2575
+        "value": 558.2576
       },
       {
         "date": "2026-01-03",
@@ -2128,7 +2128,7 @@
       },
       {
         "date": "2026-01-14",
-        "value": 574.7559
+        "value": 574.7558
       },
       {
         "date": "2026-01-15",
@@ -2200,7 +2200,7 @@
       },
       {
         "date": "2026-02-01",
-        "value": 541.0101
+        "value": 541.0102
       },
       {
         "date": "2026-02-02",
@@ -2396,7 +2396,7 @@
       },
       {
         "date": "2026-03-22",
-        "value": 506.3352
+        "value": 506.3351
       },
       {
         "date": "2026-03-23",
@@ -2580,7 +2580,7 @@
       },
       {
         "date": "2026-05-07",
-        "value": 565.4344
+        "value": 565.4345
       },
       {
         "date": "2026-05-08",
@@ -2720,7 +2720,7 @@
       },
       {
         "date": "2026-06-11",
-        "value": 543.1595
+        "value": 543.1594
       },
       {
         "date": "2026-06-12",
@@ -3100,7 +3100,7 @@
       },
       {
         "date": "2026-09-14",
-        "value": 587.2778
+        "value": 586.2398
       }
     ],
     "errors": [],
